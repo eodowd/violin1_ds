@@ -1,0 +1,760 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<DecentSampler minVersion="1.0.0">
+  <ui width="812" height="375" bgImage="Images/background.png" layoutMode="relative" bgMode="top_left">
+    <tab name="main">
+      <labeled-knob x="445" y="75" width="80" height="82" textColor="ffffffff" trackForegroundColor="ffffffff" trackBackgroundColor="66999999" label="Attack" type="float" minValue="0.0" maxValue="4.0" value="0.009999999776482582" style="custom_skin_vertical_drag" customSkinImage="Images/fx-1.png" customSkinNumFrames="79" customSkinImageOrientation="vertical" mouseDragSensitivity="100">
+        <binding type="amp" level="instrument" position="0" parameter="ENV_ATTACK"/>
+      </labeled-knob>
+      <labeled-knob x="515" y="75" width="80" height="82" textColor="ffffffff" trackForegroundColor="ffffffff" trackBackgroundColor="66999999" label="Release" type="float" minValue="0.0" maxValue="20.0" value="1.200000047683716" style="custom_skin_vertical_drag" customSkinImage="Images/fx-1.png" customSkinNumFrames="79" customSkinImageOrientation="vertical" mouseDragSensitivity="100">
+        <binding type="amp" level="instrument" position="0" parameter="ENV_RELEASE"/>
+      </labeled-knob>
+      <labeled-knob x="585" y="75" width="80" height="82" textColor="ffffffff" trackForegroundColor="ffffffff" trackBackgroundColor="66999999" label="Chorus" type="float" minValue="0.0" maxValue="1" value="0.0" style="custom_skin_vertical_drag" customSkinImage="Images/fx-1.png" customSkinNumFrames="79" customSkinImageOrientation="vertical" mouseDragSensitivity="100">
+        <binding type="effect" level="instrument" position="1" parameter="FX_MIX"/>
+      </labeled-knob>
+      <labeled-knob x="655" y="75" width="80" height="82" textColor="ffffffff" trackForegroundColor="ffffffff" trackBackgroundColor="66999999" label="Tone" type="float" minValue="0" maxValue="1" value="1.0" style="custom_skin_vertical_drag" customSkinImage="Images/fx-1.png" customSkinNumFrames="79" customSkinImageOrientation="vertical" mouseDragSensitivity="100">
+        <binding type="effect" level="instrument" position="0" parameter="FX_FILTER_FREQUENCY" translation="table" translationTable="0,33;0.3,150;0.4,450;0.5,1100;0.7,4100;0.9,11000;1.0001,22000"/>
+      </labeled-knob>
+      <labeled-knob x="725" y="75" width="80" height="82" textColor="ffffffff" trackForegroundColor="ffffffff" trackBackgroundColor="66999999" label="Reverb Mix" type="float" minValue="0" maxValue="1" value="0.0" style="custom_skin_vertical_drag" customSkinImage="Images/fx-1.png" customSkinNumFrames="79" customSkinImageOrientation="vertical" mouseDragSensitivity="100">
+        <binding type="effect" level="instrument" position="2" parameter="FX_MIX" translation="linear"/>
+      </labeled-knob>
+      <menu x="600" y="40" width="200" height="30" requireSelection="true" placeholderText="Choose..." value="1">
+        <option name="Studio">
+          <binding type="effect" level="instrument" position="2" parameter="FX_IR_FILE" translation="fixed_value" translationValue="IR/Studio.wav"/>
+        </option>
+        <option name="Church">
+          <binding type="effect" level="instrument" position="2" parameter="FX_IR_FILE" translation="fixed_value" translationValue="IR/Church.wav"/>
+        </option>
+        <option name="Garage">
+          <binding type="effect" level="instrument" position="2" parameter="FX_IR_FILE" translation="fixed_value" translationValue="IR/Garage.wav"/>
+        </option>
+        <option name="Spring">
+          <binding type="effect" level="instrument" position="2" parameter="FX_IR_FILE" translation="fixed_value" translationValue="IR/Spring.wav"/>
+        </option>
+      </menu>
+      <menu x="55" y="160" width="260" height="30" requireSelection="true" placeholderText="Choose..." value="1">
+        <option name="Solo Sustain ">
+          <binding type="control" level="ui" position="11" parameter="TEXT" translation="fixed_value" translationValue="You chose the first option."/>
+          <binding type="general" level="group" position="0" parameter="ENABLED" translation="fixed_value" translationValue="true"/>
+          <binding type="general" level="group" position="1" parameter="ENABLED" translation="fixed_value" translationValue="false"/>
+          <binding type="general" level="group" position="2" parameter="ENABLED" translation="fixed_value" translationValue="false"/>
+          <binding type="general" level="group" position="3" parameter="ENABLED" translation="fixed_value" translationValue="false"/>
+          <binding type="general" level="group" position="4" parameter="ENABLED" translation="fixed_value" translationValue="false"/>
+          <binding type="general" level="group" position="5" parameter="ENABLED" translation="fixed_value" translationValue="false"/>
+          <binding type="general" level="group" position="6" parameter="ENABLED" translation="fixed_value" translationValue="false"/>
+          <binding type="general" level="group" position="7" parameter="ENABLED" translation="fixed_value" translationValue="false"/>
+          <binding type="general" level="group" position="8" parameter="ENABLED" translation="fixed_value" translationValue="false"/>
+          <binding type="general" level="group" position="9" parameter="ENABLED" translation="fixed_value" translationValue="false"/>
+          <binding type="general" level="group" position="10" parameter="ENABLED" translation="fixed_value" translationValue="false"/>
+        </option>
+        <option name="Solo Staccato">
+          <binding type="control" level="ui" position="11" parameter="TEXT" translation="fixed_value" translationValue="You chose the second option."/>
+          <binding type="general" level="group" position="0" parameter="ENABLED" translation="fixed_value" translationValue="false"/>
+          <binding type="general" level="group" position="1" parameter="ENABLED" translation="fixed_value" translationValue="true"/>
+          <binding type="general" level="group" position="2" parameter="ENABLED" translation="fixed_value" translationValue="true"/>
+          <binding type="general" level="group" position="3" parameter="ENABLED" translation="fixed_value" translationValue="false"/>
+          <binding type="general" level="group" position="4" parameter="ENABLED" translation="fixed_value" translationValue="false"/>
+          <binding type="general" level="group" position="5" parameter="ENABLED" translation="fixed_value" translationValue="false"/>
+          <binding type="general" level="group" position="6" parameter="ENABLED" translation="fixed_value" translationValue="false"/>
+          <binding type="general" level="group" position="7" parameter="ENABLED" translation="fixed_value" translationValue="false"/>
+          <binding type="general" level="group" position="8" parameter="ENABLED" translation="fixed_value" translationValue="false"/>
+          <binding type="general" level="group" position="9" parameter="ENABLED" translation="fixed_value" translationValue="false"/>
+          <binding type="general" level="group" position="10" parameter="ENABLED" translation="fixed_value" translationValue="false"/>
+        </option>
+        <option name="Solo Tremolo">
+          <binding type="control" level="ui" position="11" parameter="TEXT" translation="fixed_value" translationValue="You chose the second option."/>
+          <binding type="general" level="group" position="0" parameter="ENABLED" translation="fixed_value" translationValue="false"/>
+          <binding type="general" level="group" position="1" parameter="ENABLED" translation="fixed_value" translationValue="false"/>
+          <binding type="general" level="group" position="2" parameter="ENABLED" translation="fixed_value" translationValue="false"/>
+          <binding type="general" level="group" position="3" parameter="ENABLED" translation="fixed_value" translationValue="true"/>
+          <binding type="general" level="group" position="4" parameter="ENABLED" translation="fixed_value" translationValue="false"/>
+          <binding type="general" level="group" position="5" parameter="ENABLED" translation="fixed_value" translationValue="false"/>
+          <binding type="general" level="group" position="6" parameter="ENABLED" translation="fixed_value" translationValue="false"/>
+          <binding type="general" level="group" position="7" parameter="ENABLED" translation="fixed_value" translationValue="false"/>
+          <binding type="general" level="group" position="8" parameter="ENABLED" translation="fixed_value" translationValue="false"/>
+          <binding type="general" level="group" position="9" parameter="ENABLED" translation="fixed_value" translationValue="false"/>
+          <binding type="general" level="group" position="10" parameter="ENABLED" translation="fixed_value" translationValue="false"/>
+        </option>
+        <option name="Section Sustain">
+          <binding type="control" level="ui" position="11" parameter="TEXT" translation="fixed_value" translationValue="You chose the second option."/>
+          <binding type="general" level="group" position="0" parameter="ENABLED" translation="fixed_value" translationValue="false"/>
+          <binding type="general" level="group" position="1" parameter="ENABLED" translation="fixed_value" translationValue="false"/>
+          <binding type="general" level="group" position="2" parameter="ENABLED" translation="fixed_value" translationValue="false"/>
+          <binding type="general" level="group" position="3" parameter="ENABLED" translation="fixed_value" translationValue="false"/>
+          <binding type="general" level="group" position="4" parameter="ENABLED" translation="fixed_value" translationValue="false"/>
+          <binding type="general" level="group" position="5" parameter="ENABLED" translation="fixed_value" translationValue="true"/>
+          <binding type="general" level="group" position="6" parameter="ENABLED" translation="fixed_value" translationValue="false"/>
+          <binding type="general" level="group" position="7" parameter="ENABLED" translation="fixed_value" translationValue="false"/>
+          <binding type="general" level="group" position="8" parameter="ENABLED" translation="fixed_value" translationValue="false"/>
+          <binding type="general" level="group" position="9" parameter="ENABLED" translation="fixed_value" translationValue="false"/>
+          <binding type="general" level="group" position="10" parameter="ENABLED" translation="fixed_value" translationValue="false"/>
+        </option>
+        <option name="Section Staccato">
+          <binding type="control" level="ui" position="11" parameter="TEXT" translation="fixed_value" translationValue="You chose the second option."/>
+          <binding type="general" level="group" position="0" parameter="ENABLED" translation="fixed_value" translationValue="false"/>
+          <binding type="general" level="group" position="1" parameter="ENABLED" translation="fixed_value" translationValue="false"/>
+          <binding type="general" level="group" position="2" parameter="ENABLED" translation="fixed_value" translationValue="false"/>
+          <binding type="general" level="group" position="3" parameter="ENABLED" translation="fixed_value" translationValue="false"/>
+          <binding type="general" level="group" position="4" parameter="ENABLED" translation="fixed_value" translationValue="false"/>
+          <binding type="general" level="group" position="5" parameter="ENABLED" translation="fixed_value" translationValue="false"/>
+          <binding type="general" level="group" position="6" parameter="ENABLED" translation="fixed_value" translationValue="true"/>
+          <binding type="general" level="group" position="7" parameter="ENABLED" translation="fixed_value" translationValue="true"/>
+          <binding type="general" level="group" position="8" parameter="ENABLED" translation="fixed_value" translationValue="false"/>
+          <binding type="general" level="group" position="9" parameter="ENABLED" translation="fixed_value" translationValue="false"/>
+          <binding type="general" level="group" position="10" parameter="ENABLED" translation="fixed_value" translationValue="false"/>
+        </option>
+        <option name="Section Tremolo">
+          <binding type="control" level="ui" position="11" parameter="TEXT" translation="fixed_value" translationValue="You chose the second option."/>
+          <binding type="general" level="group" position="0" parameter="ENABLED" translation="fixed_value" translationValue="false"/>
+          <binding type="general" level="group" position="1" parameter="ENABLED" translation="fixed_value" translationValue="false"/>
+          <binding type="general" level="group" position="2" parameter="ENABLED" translation="fixed_value" translationValue="false"/>
+          <binding type="general" level="group" position="3" parameter="ENABLED" translation="fixed_value" translationValue="false"/>
+          <binding type="general" level="group" position="4" parameter="ENABLED" translation="fixed_value" translationValue="false"/>
+          <binding type="general" level="group" position="5" parameter="ENABLED" translation="fixed_value" translationValue="false"/>
+          <binding type="general" level="group" position="6" parameter="ENABLED" translation="fixed_value" translationValue="false"/>
+          <binding type="general" level="group" position="7" parameter="ENABLED" translation="fixed_value" translationValue="false"/>
+          <binding type="general" level="group" position="8" parameter="ENABLED" translation="fixed_value" translationValue="true"/>
+          <binding type="general" level="group" position="9" parameter="ENABLED" translation="fixed_value" translationValue="false"/>
+          <binding type="general" level="group" position="10" parameter="ENABLED" translation="fixed_value" translationValue="false"/>
+        </option>
+        <option name="Section Pizzicato">
+          <binding type="control" level="ui" position="11" parameter="TEXT" translation="fixed_value" translationValue="You chose the second option."/>
+          <binding type="general" level="group" position="0" parameter="ENABLED" translation="fixed_value" translationValue="false"/>
+          <binding type="general" level="group" position="1" parameter="ENABLED" translation="fixed_value" translationValue="false"/>
+          <binding type="general" level="group" position="2" parameter="ENABLED" translation="fixed_value" translationValue="false"/>
+          <binding type="general" level="group" position="3" parameter="ENABLED" translation="fixed_value" translationValue="false"/>
+          <binding type="general" level="group" position="4" parameter="ENABLED" translation="fixed_value" translationValue="false"/>
+          <binding type="general" level="group" position="5" parameter="ENABLED" translation="fixed_value" translationValue="false"/>
+          <binding type="general" level="group" position="6" parameter="ENABLED" translation="fixed_value" translationValue="false"/>
+          <binding type="general" level="group" position="7" parameter="ENABLED" translation="fixed_value" translationValue="false"/>
+          <binding type="general" level="group" position="8" parameter="ENABLED" translation="fixed_value" translationValue="false"/>
+          <binding type="general" level="group" position="9" parameter="ENABLED" translation="fixed_value" translationValue="true"/>
+          <binding type="general" level="group" position="10" parameter="ENABLED" translation="fixed_value" translationValue="false"/>
+        </option>
+        <option name="Section Sustain Accent">
+          <binding type="control" level="ui" position="11" parameter="TEXT" translation="fixed_value" translationValue="You chose the second option."/>
+          <binding type="general" level="group" position="0" parameter="ENABLED" translation="fixed_value" translationValue="false"/>
+          <binding type="general" level="group" position="1" parameter="ENABLED" translation="fixed_value" translationValue="false"/>
+          <binding type="general" level="group" position="2" parameter="ENABLED" translation="fixed_value" translationValue="false"/>
+          <binding type="general" level="group" position="3" parameter="ENABLED" translation="fixed_value" translationValue="false"/>
+          <binding type="general" level="group" position="4" parameter="ENABLED" translation="fixed_value" translationValue="false"/>
+          <binding type="general" level="group" position="5" parameter="ENABLED" translation="fixed_value" translationValue="false"/>
+          <binding type="general" level="group" position="6" parameter="ENABLED" translation="fixed_value" translationValue="false"/>
+          <binding type="general" level="group" position="7" parameter="ENABLED" translation="fixed_value" translationValue="false"/>
+          <binding type="general" level="group" position="8" parameter="ENABLED" translation="fixed_value" translationValue="false"/>
+          <binding type="general" level="group" position="9" parameter="ENABLED" translation="fixed_value" translationValue="false"/>
+          <binding type="general" level="group" position="10" parameter="ENABLED" translation="fixed_value" translationValue="true"/>
+        </option>
+      </menu>
+    </tab>
+    <keyboard/>
+  </ui>
+  <groups attack="0.009999999776482582" release="1.200000047683716">
+    <group name="1st-violin-solo-sustain" enabled="true">
+      <sample path="samples/1st-violin-solo-sustain-G2-V127-5R2U.aif" name="55(G2)-127" rootNote="55" loNote="30" hiNote="55" loVel="0" hiVel="127" start="58" end="507520" loopEnabled="1" loopStart="260448" loopEnd="390541" loopCrossfade="2168" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-sustain-G#2-V127-OF41.aif" name="56(G#2)-127" rootNote="56" loNote="56" hiNote="56" loVel="0" hiVel="127" start="243" end="507264" loopEnabled="1" loopStart="112608" loopEnd="341361" loopCrossfade="2340" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-sustain-A2-V127-2ZBW.aif" name="57(A2)-127" rootNote="57" loNote="57" hiNote="57" loVel="0" hiVel="127" start="576" end="506627" loopEnabled="1" loopStart="194326" loopEnd="286471" loopCrossfade="1535" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-sustain-A#2-V127-VERC.aif" name="58(A#2)-127" rootNote="58" loNote="58" hiNote="58" loVel="0" hiVel="127" start="278" end="515456" loopEnabled="1" loopStart="183934" loopEnd="357114" loopCrossfade="2882" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-sustain-B2-V127-5KXI.aif" name="59(B2)-127" rootNote="59" loNote="59" hiNote="59" loVel="0" hiVel="127" start="213" end="514432" loopEnabled="1" loopStart="111780" loopEnd="357797" loopCrossfade="2324" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-sustain-C3-V127-9351.aif" name="60(C3)-127" rootNote="60" loNote="60" hiNote="60" loVel="0" hiVel="127" start="620" end="508288" loopEnabled="1" loopStart="201025" loopEnd="312815" loopCrossfade="1863" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-sustain-C#3-V127-S27Y.aif" name="61(C#3)-127" rootNote="61" loNote="61" hiNote="61" loVel="0" hiVel="127" start="372" end="515328" loopEnabled="1" loopStart="147889" loopEnd="231799" loopCrossfade="1398" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-sustain-D3-V127-7ZMC.aif" name="62(D3)-127" rootNote="62" loNote="62" hiNote="62" loVel="0" hiVel="127" start="642" end="508032" loopEnabled="1" loopStart="89035" loopEnd="345931" loopCrossfade="1841" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-sustain-D#3-V127-BF7G.aif" name="63(D#3)-127" rootNote="63" loNote="63" hiNote="63" loVel="0" hiVel="127" start="268" end="507648" loopEnabled="1" loopStart="87679" loopEnd="336016" loopCrossfade="1821" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-sustain-E3-V127-LWHG.aif" name="64(E3)-127" rootNote="64" loNote="64" hiNote="64" loVel="0" hiVel="127" start="606" end="515200" loopEnabled="1" loopStart="297344" loopEnd="404971" loopCrossfade="1793" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-sustain-F3-V127-SWJG.aif" name="65(F3)-127" rootNote="65" loNote="65" hiNote="65" loVel="0" hiVel="127" start="188" end="507648" loopEnabled="1" loopStart="140264" loopEnd="241478" loopCrossfade="1686" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-sustain-F#3-V127-6PUT.aif" name="66(F#3)-127" rootNote="66" loNote="66" hiNote="66" loVel="0" hiVel="127" start="254" end="514816" loopEnabled="1" loopStart="138664" loopEnd="333709" loopCrossfade="2883" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-sustain-G3-V127-IHAI.aif" name="67(G3)-127" rootNote="67" loNote="67" hiNote="67" loVel="0" hiVel="127" start="679" end="515456" loopEnabled="1" loopStart="101052" loopEnd="202294" loopCrossfade="1538" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-sustain-G#3-V127-8ELV.aif" name="68(G#3)-127" rootNote="68" loNote="68" hiNote="68" loVel="0" hiVel="127" start="530" end="508032" loopEnabled="1" loopStart="88315" loopEnd="189210" loopCrossfade="1535" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-sustain-A3-V127-XL0H.aif" name="69(A3)-127" rootNote="69" loNote="69" hiNote="69" loVel="0" hiVel="127" start="198" end="507008" loopEnabled="1" loopStart="264809" loopEnd="375314" loopCrossfade="1841" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-sustain-A#3-V127-IFBB.aif" name="70(A#3)-127" rootNote="70" loNote="70" hiNote="70" loVel="0" hiVel="127" start="383" end="514048" loopEnabled="1" loopStart="250029" loopEnd="354291" loopCrossfade="1737" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-sustain-B3-V127-UPCG.aif" name="71(B3)-127" rootNote="71" loNote="71" hiNote="71" loVel="0" hiVel="127" start="78" end="507136" loopEnabled="1" loopStart="136985" loopEnd="235090" loopCrossfade="1633" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-sustain-C4-V127-OC0F.aif" name="72(C4)-127" rootNote="72" loNote="72" hiNote="72" loVel="0" hiVel="127" start="185" end="507776" loopEnabled="1" loopStart="213948" loopEnd="320538" loopCrossfade="1776" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-sustain-C#4-V127-JTSK.aif" name="73(C#4)-127" rootNote="73" loNote="73" hiNote="73" loVel="0" hiVel="127" start="189" end="507648" loopEnabled="1" loopStart="134994" loopEnd="272683" loopCrossfade="2147" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-sustain-D4-V127-JYBH.aif" name="74(D4)-127" rootNote="74" loNote="74" hiNote="74" loVel="0" hiVel="127" start="393" end="514304" loopEnabled="1" loopStart="138044" loopEnd="248072" loopCrossfade="1826" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-sustain-D#4-V127-4FSD.aif" name="75(D#4)-127" rootNote="75" loNote="75" hiNote="75" loVel="0" hiVel="127" start="411" end="515072" loopEnabled="1" loopStart="96107" loopEnd="307054" loopCrossfade="1993" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-sustain-E4-V127-J7WN.aif" name="76(E4)-127" rootNote="76" loNote="76" hiNote="76" loVel="0" hiVel="127" start="446" end="507788" loopEnabled="1" loopStart="157731" loopEnd="320704" loopCrossfade="2716" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-sustain-F4-V127-CJ2X.aif" name="77(F4)-127" rootNote="77" loNote="77" hiNote="77" loVel="0" hiVel="127" start="367" end="514944" loopEnabled="1" loopStart="219837" loopEnd="322056" loopCrossfade="1703" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-sustain-F#4-V127-GRPQ.aif" name="78(F#4)-127" rootNote="78" loNote="78" hiNote="78" loVel="0" hiVel="127" start="129" end="508160" loopEnabled="1" loopStart="99728" loopEnd="374959" loopCrossfade="2074" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-sustain-G4-V127-FWK0.aif" name="79(G4)-127" rootNote="79" loNote="79" hiNote="79" loVel="0" hiVel="127" start="188" end="514304" loopEnabled="1" loopStart="94144" loopEnd="365655" loopCrossfade="1957" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-sustain-G#4-V127-R3B0.aif" name="80(G#4)-127" rootNote="80" loNote="80" hiNote="80" loVel="0" hiVel="127" start="676" end="508288" loopEnabled="1" loopStart="163333" loopEnd="238996" loopCrossfade="1261" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-sustain-A4-V127-EGZN.aif" name="81(A4)-127" rootNote="81" loNote="81" hiNote="81" loVel="0" hiVel="127" start="643" end="513664" loopEnabled="1" loopStart="109749" loopEnd="324185" loopCrossfade="2273" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-sustain-A#4-V127-5QYA.aif" name="82(A#4)-127" rootNote="82" loNote="82" hiNote="82" loVel="0" hiVel="127" start="638" end="514816" loopEnabled="1" loopStart="183651" loopEnd="313999" loopCrossfade="2172" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-sustain-B4-V127-M3OQ.aif" name="83(B4)-127" rootNote="83" loNote="83" hiNote="83" loVel="0" hiVel="127" start="509" end="507008" loopEnabled="1" loopStart="102539" loopEnd="259770" loopCrossfade="2125" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-sustain-C5-V127-EJD3.aif" name="84(C5)-127" rootNote="84" loNote="84" hiNote="84" loVel="0" hiVel="127" start="354" end="507264" loopEnabled="1" loopStart="143184" loopEnd="234550" loopCrossfade="1522" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-sustain-C#5-V127-XGM3.aif" name="85(C#5)-127" rootNote="85" loNote="85" hiNote="85" loVel="0" hiVel="127" start="310" end="514816" loopEnabled="1" loopStart="168561" loopEnd="296805" loopCrossfade="2134" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-sustain-D5-V127-Y7V6.aif" name="86(D5)-127" rootNote="86" loNote="86" hiNote="86" loVel="0" hiVel="127" start="453" end="515200" loopEnabled="1" loopStart="144061" loopEnd="334363" loopCrossfade="2991" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-sustain-D#5-V127-4CNZ.aif" name="87(D#5)-127" rootNote="87" loNote="87" hiNote="87" loVel="0" hiVel="127" start="100" end="514048" loopEnabled="1" loopStart="102460" loopEnd="342481" loopCrossfade="2132" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-sustain-E5-V127-0YPW.aif" name="88(E5)-127" rootNote="88" loNote="88" hiNote="88" loVel="0" hiVel="127" start="438" end="512896" loopEnabled="1" loopStart="233639" loopEnd="346330" loopCrossfade="1878" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-sustain-F5-V127-6LLV.aif" name="89(F5)-127" rootNote="89" loNote="89" hiNote="89" loVel="0" hiVel="127" start="323" end="506634" loopEnabled="1" loopStart="280176" loopEnd="386442" loopCrossfade="1771" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-sustain-F#5-V127-RU8J.aif" name="90(F#5)-127" rootNote="90" loNote="90" hiNote="90" loVel="0" hiVel="127" start="130" end="514816" loopEnabled="1" loopStart="208986" loopEnd="319594" loopCrossfade="1843" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-sustain-G5-V127-P90G.aif" name="91(G5)-127" rootNote="91" loNote="91" hiNote="91" loVel="0" hiVel="127" start="385" end="513920" loopEnabled="1" loopStart="92772" loopEnd="264828" loopCrossfade="1924" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-sustain-G#5-V127-T5XF.aif" name="92(G#5)-127" rootNote="92" loNote="92" hiNote="92" loVel="0" hiVel="127" start="137" end="513280" loopEnabled="1" loopStart="176874" loopEnd="286465" loopCrossfade="1826" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-sustain-A5-V127-2OE6.aif" name="93(A5)-127" rootNote="93" loNote="93" hiNote="93" loVel="0" hiVel="127" start="566" end="513792" loopEnabled="1" loopStart="95669" loopEnd="406835" loopCrossfade="1981" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-sustain-A#5-V127-LLHF.aif" name="94(A#5)-127" rootNote="94" loNote="94" hiNote="94" loVel="0" hiVel="127" start="472" end="507525" loopEnabled="1" loopStart="315880" loopEnd="383356" loopCrossfade="1124" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-sustain-B5-V127-AALP.aif" name="95(B5)-127" rootNote="95" loNote="95" hiNote="95" loVel="0" hiVel="127" start="563" end="514688" loopEnabled="1" loopStart="281083" loopEnd="376291" loopCrossfade="1585" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-sustain-C6-V127-HBEM.aif" name="96(C6)-127" rootNote="96" loNote="96" hiNote="96" loVel="0" hiVel="127" start="218" end="507648" loopEnabled="1" loopStart="310838" loopEnd="400974" loopCrossfade="1502" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-sustain-C#6-V127-7DKO.aif" name="97(C#6)-127" rootNote="97" loNote="97" hiNote="97" loVel="0" hiVel="127" start="380" end="507904" loopEnabled="1" loopStart="166201" loopEnd="265548" loopCrossfade="1655" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-sustain-D6-V127-EYZP.aif" name="98(D6)-127" rootNote="98" loNote="98" hiNote="98" loVel="0" hiVel="127" start="559" end="513280" loopEnabled="1" loopStart="89585" loopEnd="156153" loopCrossfade="1109" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-sustain-D#6-V127-QZXS.aif" name="99(D#6)-127" rootNote="99" loNote="99" hiNote="99" loVel="0" hiVel="127" start="494" end="508032" loopEnabled="1" loopStart="273653" loopEnd="412215" loopCrossfade="2096" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-sustain-E6-V127-CIH0.aif" name="100(E6)-127" rootNote="100" loNote="100" hiNote="100" loVel="0" hiVel="127" start="316" end="514816" loopEnabled="1" loopStart="127382" loopEnd="412640" loopCrossfade="2647" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-sustain-F6-V127-TJE4.aif" name="101(F6)-127" rootNote="101" loNote="101" hiNote="101" loVel="0" hiVel="127" start="271" end="507136" loopEnabled="1" loopStart="210441" loopEnd="277940" loopCrossfade="1124" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-sustain-F#6-V127-GNGL.aif" name="102(F#6)-127" rootNote="102" loNote="102" hiNote="102" loVel="0" hiVel="127" start="718" end="508416" loopEnabled="1" loopStart="87291" loopEnd="416320" loopCrossfade="1803" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-sustain-G6-V127-TB22.aif" name="103(G6)-127" rootNote="103" loNote="103" hiNote="103" loVel="0" hiVel="127" start="581" end="507264" loopEnabled="1" loopStart="167671" loopEnd="358006" loopCrossfade="3481" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-sustain-G#6-V127-CAU8.aif" name="104(G#6)-127" rootNote="104" loNote="104" hiNote="104" loVel="0" hiVel="127" start="452" end="513920" loopEnabled="1" loopStart="261790" loopEnd="346783" loopCrossfade="1416" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-sustain-A6-V127-4JDP.aif" name="105(A6)-127" rootNote="105" loNote="105" hiNote="105" loVel="0" hiVel="127" start="367" end="507136" loopEnabled="1" loopStart="139740" loopEnd="290870" loopCrossfade="2903" loopCrossfadeMode="equal_power"/>
+      <effects/>
+    </group>
+    <group name="1st-violin-solo-staccato RR:1" seqPosition="1" enabled="false">
+      <sample path="samples/1st-violin-solo-staccato-G2-V127-MHWY.aif" name="55(G2)-127" rootNote="55" loNote="24" hiNote="55" loVel="1" hiVel="127" start="491" end="48024"/>
+      <sample path="samples/1st-violin-solo-staccato-G#2-V127-FKTW.aif" name="56(G#2)-127" rootNote="56" loNote="56" hiNote="56" loVel="0" hiVel="127" start="623" end="55296"/>
+      <sample path="samples/1st-violin-solo-staccato-A2-V127-MUON.aif" name="57(A2)-127" rootNote="57" loNote="57" hiNote="57" loVel="0" hiVel="127" start="363" end="52480"/>
+      <sample path="samples/1st-violin-solo-staccato-A#2-V127-ULI8.aif" name="58(A#2)-127" rootNote="58" loNote="58" hiNote="58" loVel="0" hiVel="127" start="111" end="61696"/>
+      <sample path="samples/1st-violin-solo-staccato-B2-V127-QGBO.aif" name="59(B2)-127" rootNote="59" loNote="59" hiNote="59" loVel="0" hiVel="127" start="555" end="53112"/>
+      <sample path="samples/1st-violin-solo-staccato-C3-V127-7YIA.aif" name="60(C3)-127" rootNote="60" loNote="60" hiNote="60" loVel="0" hiVel="127" start="499" end="55424"/>
+      <sample path="samples/1st-violin-solo-staccato-C#3-V127-UYH4.aif" name="61(C#3)-127" rootNote="61" loNote="61" hiNote="61" loVel="0" hiVel="127" start="487" end="62720"/>
+      <sample path="samples/1st-violin-solo-staccato-D3-V127-C1LR.aif" name="62(D3)-127" rootNote="62" loNote="62" hiNote="62" loVel="0" hiVel="127" start="279" end="42824"/>
+      <sample path="samples/1st-violin-solo-staccato-D#3-V127-3JGD.aif" name="63(D#3)-127" rootNote="63" loNote="63" hiNote="63" loVel="0" hiVel="127" start="383" end="50816"/>
+      <sample path="samples/1st-violin-solo-staccato-E3-V127-LUIM.aif" name="64(E3)-127" rootNote="64" loNote="64" hiNote="64" loVel="0" hiVel="127" start="387" end="75136"/>
+      <sample path="samples/1st-violin-solo-staccato-F3-V127-5BUD.aif" name="65(F3)-127" rootNote="65" loNote="65" hiNote="65" loVel="0" hiVel="127" start="539" end="61928"/>
+      <sample path="samples/1st-violin-solo-staccato-F#3-V127-BMAZ.aif" name="66(F#3)-127" rootNote="66" loNote="66" hiNote="66" loVel="0" hiVel="127" start="431" end="67840"/>
+      <sample path="samples/1st-violin-solo-staccato-G3-V127-4F3W.aif" name="67(G3)-127" rootNote="67" loNote="67" hiNote="67" loVel="0" hiVel="127" start="547" end="97756"/>
+      <sample path="samples/1st-violin-solo-staccato-G#3-V127-V2HU.aif" name="68(G#3)-127" rootNote="68" loNote="68" hiNote="68" loVel="0" hiVel="127" start="419" end="92092"/>
+      <sample path="samples/1st-violin-solo-staccato-A3-V127-L1I1.aif" name="69(A3)-127" rootNote="69" loNote="69" hiNote="69" loVel="0" hiVel="127" start="327" end="87060"/>
+      <sample path="samples/1st-violin-solo-staccato-A#3-V127-SSYY.aif" name="70(A#3)-127" rootNote="70" loNote="70" hiNote="70" loVel="0" hiVel="127" start="307" end="49668"/>
+      <sample path="samples/1st-violin-solo-staccato-B3-V127-ZSU6.aif" name="71(B3)-127" rootNote="71" loNote="71" hiNote="71" loVel="0" hiVel="127" start="171" end="66560"/>
+      <sample path="samples/1st-violin-solo-staccato-C4-V127-YKWF.aif" name="72(C4)-127" rootNote="72" loNote="72" hiNote="72" loVel="0" hiVel="127" start="619" end="38124"/>
+      <sample path="samples/1st-violin-solo-staccato-C#4-V127-VPEC.aif" name="73(C#4)-127" rootNote="73" loNote="73" hiNote="73" loVel="0" hiVel="127" start="111" end="50688"/>
+      <sample path="samples/1st-violin-solo-staccato-D4-V127-LYKR.aif" name="74(D4)-127" rootNote="74" loNote="74" hiNote="74" loVel="0" hiVel="127" start="599" end="48384"/>
+      <sample path="samples/1st-violin-solo-staccato-D#4-V127-K0XZ.aif" name="75(D#4)-127" rootNote="75" loNote="75" hiNote="75" loVel="0" hiVel="127" start="647" end="46080"/>
+      <sample path="samples/1st-violin-solo-staccato-E4-V127-8U7F.aif" name="76(E4)-127" rootNote="76" loNote="76" hiNote="76" loVel="0" hiVel="127" start="427" end="48920"/>
+      <sample path="samples/1st-violin-solo-staccato-F4-V127-Q37A.aif" name="77(F4)-127" rootNote="77" loNote="77" hiNote="77" loVel="0" hiVel="127" start="327" end="56064"/>
+      <sample path="samples/1st-violin-solo-staccato-F#4-V127-WWTT.aif" name="78(F#4)-127" rootNote="78" loNote="78" hiNote="78" loVel="0" hiVel="127" start="567" end="43848"/>
+      <sample path="samples/1st-violin-solo-staccato-G4-V127-B6NU.aif" name="79(G4)-127" rootNote="79" loNote="79" hiNote="79" loVel="0" hiVel="127" start="575" end="51712"/>
+      <sample path="samples/1st-violin-solo-staccato-G#4-V127-VMPQ.aif" name="80(G#4)-127" rootNote="80" loNote="80" hiNote="80" loVel="0" hiVel="127" start="487" end="49792"/>
+      <sample path="samples/1st-violin-solo-staccato-A4-V127-XAN1.aif" name="81(A4)-127" rootNote="81" loNote="81" hiNote="81" loVel="0" hiVel="127" start="307" end="67212"/>
+      <sample path="samples/1st-violin-solo-staccato-A#4-V127-SWIT.aif" name="82(A#4)-127" rootNote="82" loNote="82" hiNote="82" loVel="0" hiVel="127" start="319" end="49280"/>
+      <sample path="samples/1st-violin-solo-staccato-B4-V127-GHK7.aif" name="83(B4)-127" rootNote="83" loNote="83" hiNote="83" loVel="0" hiVel="127" start="139" end="37348"/>
+      <sample path="samples/1st-violin-solo-staccato-C5-V127-LE9S.aif" name="84(C5)-127" rootNote="84" loNote="84" hiNote="84" loVel="0" hiVel="127" start="219" end="41252"/>
+      <sample path="samples/1st-violin-solo-staccato-C#5-V127-3CNY.aif" name="85(C#5)-127" rootNote="85" loNote="85" hiNote="85" loVel="0" hiVel="127" start="503" end="39292"/>
+      <sample path="samples/1st-violin-solo-staccato-D5-V127-HZQH.aif" name="86(D5)-127" rootNote="86" loNote="86" hiNote="86" loVel="0" hiVel="127" start="559" end="44772"/>
+      <sample path="samples/1st-violin-solo-staccato-D#5-V127-C8XO.aif" name="87(D#5)-127" rootNote="87" loNote="87" hiNote="87" loVel="0" hiVel="127" start="55" end="51840"/>
+      <sample path="samples/1st-violin-solo-staccato-E5-V127-5MQ0.aif" name="88(E5)-127" rootNote="88" loNote="88" hiNote="88" loVel="0" hiVel="127" start="679" end="56704"/>
+      <sample path="samples/1st-violin-solo-staccato-F5-V127-WJG7.aif" name="89(F5)-127" rootNote="89" loNote="89" hiNote="89" loVel="0" hiVel="127" start="527" end="50688"/>
+      <sample path="samples/1st-violin-solo-staccato-F#5-V127-DDJB.aif" name="90(F#5)-127" rootNote="90" loNote="90" hiNote="90" loVel="0" hiVel="127" start="347" end="48256"/>
+      <sample path="samples/1st-violin-solo-staccato-G5-V127-K4K4.aif" name="91(G5)-127" rootNote="91" loNote="91" hiNote="91" loVel="0" hiVel="127" start="519" end="36468"/>
+      <sample path="samples/1st-violin-solo-staccato-G#5-V127-0VLP.aif" name="92(G#5)-127" rootNote="92" loNote="92" hiNote="92" loVel="0" hiVel="127" start="583" end="37572"/>
+      <sample path="samples/1st-violin-solo-staccato-A5-V127-TPJY.aif" name="93(A5)-127" rootNote="93" loNote="93" hiNote="93" loVel="0" hiVel="127" start="555" end="39412"/>
+      <sample path="samples/1st-violin-solo-staccato-A#5-V127-5ALV.aif" name="94(A#5)-127" rootNote="94" loNote="94" hiNote="94" loVel="0" hiVel="127" start="499" end="49920"/>
+      <sample path="samples/1st-violin-solo-staccato-B5-V127-FS7D.aif" name="95(B5)-127" rootNote="95" loNote="95" hiNote="95" loVel="0" hiVel="127" start="143" end="37920"/>
+      <sample path="samples/1st-violin-solo-staccato-C6-V127-ATO4.aif" name="96(C6)-127" rootNote="96" loNote="96" hiNote="96" loVel="0" hiVel="127" start="179" end="35680"/>
+      <sample path="samples/1st-violin-solo-staccato-C#6-V127-MYHN.aif" name="97(C#6)-127" rootNote="97" loNote="97" hiNote="97" loVel="0" hiVel="127" start="327" end="43264"/>
+      <sample path="samples/1st-violin-solo-staccato-D6-V127-E823.aif" name="98(D6)-127" rootNote="98" loNote="98" hiNote="98" loVel="0" hiVel="127" start="343" end="31768"/>
+      <sample path="samples/1st-violin-solo-staccato-D#6-V127-9LOI.aif" name="99(D#6)-127" rootNote="99" loNote="99" hiNote="99" loVel="0" hiVel="127" start="535" end="30208"/>
+      <sample path="samples/1st-violin-solo-staccato-E6-V127-GXU1.aif" name="100(E6)-127" rootNote="100" loNote="100" hiNote="100" loVel="0" hiVel="127" start="651" end="28576"/>
+      <sample path="samples/1st-violin-solo-staccato-F6-V127-XADI.aif" name="101(F6)-127" rootNote="101" loNote="101" hiNote="101" loVel="0" hiVel="127" start="195" end="26580"/>
+      <sample path="samples/1st-violin-solo-staccato-F#6-V127-3GGV.aif" name="102(F#6)-127" rootNote="102" loNote="102" hiNote="102" loVel="0" hiVel="127" start="251" end="25232"/>
+      <sample path="samples/1st-violin-solo-staccato-G6-V127-MTH8.aif" name="103(G6)-127" rootNote="103" loNote="103" hiNote="103" loVel="0" hiVel="127" start="347" end="23960"/>
+      <sample path="samples/1st-violin-solo-staccato-G#6-V127-W3OS.aif" name="104(G#6)-127" rootNote="104" loNote="104" hiNote="104" loVel="0" hiVel="127" start="487" end="22736"/>
+      <sample path="samples/1st-violin-solo-staccato-A6-V127-S0LL.aif" name="105(A6)-127" rootNote="105" loNote="105" hiNote="105" loVel="0" hiVel="127" start="495" end="21520"/>
+      <effects/>
+    </group>
+    <group name="1st-violin-solo-staccato RR:2" seqPosition="2" enabled="false">
+      <sample path="samples/1st-violin-solo-staccato-G2-V127-ZBJD.aif" name="55(G2)-127" rootNote="55" loNote="24" hiNote="55" loVel="1" hiVel="127" start="567" end="78720" seqPosition="2"/>
+      <sample path="samples/1st-violin-solo-staccato-G#2-V127-ZHPJ.aif" name="56(G#2)-127" rootNote="56" loNote="56" hiNote="56" loVel="0" hiVel="127" start="291" end="64752" seqPosition="2"/>
+      <sample path="samples/1st-violin-solo-staccato-A2-V127-B14L.aif" name="57(A2)-127" rootNote="57" loNote="57" hiNote="57" loVel="0" hiVel="127" start="515" end="71424" seqPosition="2"/>
+      <sample path="samples/1st-violin-solo-staccato-A#2-V127-U6UH.aif" name="58(A#2)-127" rootNote="58" loNote="58" hiNote="58" loVel="0" hiVel="127" start="379" end="56060" seqPosition="2"/>
+      <sample path="samples/1st-violin-solo-staccato-B2-V127-JRJ1.aif" name="59(B2)-127" rootNote="59" loNote="59" hiNote="59" loVel="0" hiVel="127" start="535" end="59776" seqPosition="2"/>
+      <sample path="samples/1st-violin-solo-staccato-C3-V127-4NUL.aif" name="60(C3)-127" rootNote="60" loNote="60" hiNote="60" loVel="0" hiVel="127" start="63" end="47640" seqPosition="2"/>
+      <sample path="samples/1st-violin-solo-staccato-C#3-V127-4TXJ.aif" name="61(C#3)-127" rootNote="61" loNote="61" hiNote="61" loVel="0" hiVel="127" start="531" end="55936" seqPosition="2"/>
+      <sample path="samples/1st-violin-solo-staccato-D3-V127-KGIM.aif" name="62(D3)-127" rootNote="62" loNote="62" hiNote="62" loVel="0" hiVel="127" start="175" end="58624" seqPosition="2"/>
+      <sample path="samples/1st-violin-solo-staccato-D#3-V127-54U2.aif" name="63(D#3)-127" rootNote="63" loNote="63" hiNote="63" loVel="0" hiVel="127" start="215" end="55936" seqPosition="2"/>
+      <sample path="samples/1st-violin-solo-staccato-E3-V127-156Q.aif" name="64(E3)-127" rootNote="64" loNote="64" hiNote="64" loVel="0" hiVel="127" start="243" end="86656" seqPosition="2"/>
+      <sample path="samples/1st-violin-solo-staccato-F3-V127-WUUZ.aif" name="65(F3)-127" rootNote="65" loNote="65" hiNote="65" loVel="0" hiVel="127" start="451" end="72324" seqPosition="2"/>
+      <sample path="samples/1st-violin-solo-staccato-F#3-V127-5WNZ.aif" name="66(F#3)-127" rootNote="66" loNote="66" hiNote="66" loVel="0" hiVel="127" start="335" end="68000" seqPosition="2"/>
+      <sample path="samples/1st-violin-solo-staccato-G3-V127-ZI8H.aif" name="67(G3)-127" rootNote="67" loNote="67" hiNote="67" loVel="0" hiVel="127" start="455" end="62208" seqPosition="2"/>
+      <sample path="samples/1st-violin-solo-staccato-G#3-V127-GOE3.aif" name="68(G#3)-127" rootNote="68" loNote="68" hiNote="68" loVel="0" hiVel="127" start="475" end="58752" seqPosition="2"/>
+      <sample path="samples/1st-violin-solo-staccato-A3-V127-0V3T.aif" name="69(A3)-127" rootNote="69" loNote="69" hiNote="69" loVel="0" hiVel="127" start="627" end="56192" seqPosition="2"/>
+      <sample path="samples/1st-violin-solo-staccato-A#3-V127-76LX.aif" name="70(A#3)-127" rootNote="70" loNote="70" hiNote="70" loVel="0" hiVel="127" start="135" end="70144" seqPosition="2"/>
+      <sample path="samples/1st-violin-solo-staccato-B3-V127-W830.aif" name="71(B3)-127" rootNote="71" loNote="71" hiNote="71" loVel="0" hiVel="127" start="207" end="46640" seqPosition="2"/>
+      <sample path="samples/1st-violin-solo-staccato-C4-V127-0AB7.aif" name="72(C4)-127" rootNote="72" loNote="72" hiNote="72" loVel="0" hiVel="127" start="219" end="42723" seqPosition="2"/>
+      <sample path="samples/1st-violin-solo-staccato-C#4-V127-264V.aif" name="73(C#4)-127" rootNote="73" loNote="73" hiNote="73" loVel="0" hiVel="127" start="559" end="35896" seqPosition="2"/>
+      <sample path="samples/1st-violin-solo-staccato-D4-V127-UJ0M.aif" name="74(D4)-127" rootNote="74" loNote="74" hiNote="74" loVel="0" hiVel="127" start="435" end="43520" seqPosition="2"/>
+      <sample path="samples/1st-violin-solo-staccato-D#4-V127-G01C.aif" name="75(D#4)-127" rootNote="75" loNote="75" hiNote="75" loVel="0" hiVel="127" start="375" end="41728" seqPosition="2"/>
+      <sample path="samples/1st-violin-solo-staccato-E4-V127-IBSO.aif" name="76(E4)-127" rootNote="76" loNote="76" hiNote="76" loVel="0" hiVel="127" start="355" end="56320" seqPosition="2"/>
+      <sample path="samples/1st-violin-solo-staccato-F4-V127-KEUV.aif" name="77(F4)-127" rootNote="77" loNote="77" hiNote="77" loVel="0" hiVel="127" start="459" end="44316" seqPosition="2"/>
+      <sample path="samples/1st-violin-solo-staccato-F#4-V127-30T5.aif" name="78(F#4)-127" rootNote="78" loNote="78" hiNote="78" loVel="0" hiVel="127" start="135" end="51200" seqPosition="2"/>
+      <sample path="samples/1st-violin-solo-staccato-G4-V127-3TZG.aif" name="79(G4)-127" rootNote="79" loNote="79" hiNote="79" loVel="0" hiVel="127" start="551" end="39620" seqPosition="2"/>
+      <sample path="samples/1st-violin-solo-staccato-G#4-V127-CMYW.aif" name="80(G#4)-127" rootNote="80" loNote="80" hiNote="80" loVel="0" hiVel="127" start="663" end="71188" seqPosition="2"/>
+      <sample path="samples/1st-violin-solo-staccato-A4-V127-UD3T.aif" name="81(A4)-127" rootNote="81" loNote="81" hiNote="81" loVel="0" hiVel="127" start="207" end="48000" seqPosition="2"/>
+      <sample path="samples/1st-violin-solo-staccato-A#4-V127-8V2J.aif" name="82(A#4)-127" rootNote="82" loNote="82" hiNote="82" loVel="0" hiVel="127" start="463" end="84352" seqPosition="2"/>
+      <sample path="samples/1st-violin-solo-staccato-B4-V127-GXR6.aif" name="83(B4)-127" rootNote="83" loNote="83" hiNote="83" loVel="0" hiVel="127" start="471" end="80000" seqPosition="2"/>
+      <sample path="samples/1st-violin-solo-staccato-C5-V127-5GHB.aif" name="84(C5)-127" rootNote="84" loNote="84" hiNote="84" loVel="0" hiVel="127" start="591" end="50312" seqPosition="2"/>
+      <sample path="samples/1st-violin-solo-staccato-C#5-V127-OOTZ.aif" name="85(C#5)-127" rootNote="85" loNote="85" hiNote="85" loVel="0" hiVel="127" start="511" end="57216" seqPosition="2"/>
+      <sample path="samples/1st-violin-solo-staccato-D5-V127-9B60.aif" name="86(D5)-127" rootNote="86" loNote="86" hiNote="86" loVel="0" hiVel="127" start="419" end="37036" seqPosition="2"/>
+      <sample path="samples/1st-violin-solo-staccato-D#5-V127-R1VM.aif" name="87(D#5)-127" rootNote="87" loNote="87" hiNote="87" loVel="0" hiVel="127" start="503" end="35160" seqPosition="2"/>
+      <sample path="samples/1st-violin-solo-staccato-E5-V127-FVKN.aif" name="88(E5)-127" rootNote="88" loNote="88" hiNote="88" loVel="0" hiVel="127" start="371" end="53248" seqPosition="2"/>
+      <sample path="samples/1st-violin-solo-staccato-F5-V127-YD8P.aif" name="89(F5)-127" rootNote="89" loNote="89" hiNote="89" loVel="0" hiVel="127" start="439" end="44396" seqPosition="2"/>
+      <sample path="samples/1st-violin-solo-staccato-F#5-V127-C3EQ.aif" name="90(F#5)-127" rootNote="90" loNote="90" hiNote="90" loVel="0" hiVel="127" start="159" end="41392" seqPosition="2"/>
+      <sample path="samples/1st-violin-solo-staccato-G5-V127-HYQY.aif" name="91(G5)-127" rootNote="91" loNote="91" hiNote="91" loVel="0" hiVel="127" start="239" end="39440" seqPosition="2"/>
+      <sample path="samples/1st-violin-solo-staccato-G#5-V127-YK8Q.aif" name="92(G#5)-127" rootNote="92" loNote="92" hiNote="92" loVel="0" hiVel="127" start="227" end="34116" seqPosition="2"/>
+      <sample path="samples/1st-violin-solo-staccato-A5-V127-H34J.aif" name="93(A5)-127" rootNote="93" loNote="93" hiNote="93" loVel="0" hiVel="127" start="179" end="44544" seqPosition="2"/>
+      <sample path="samples/1st-violin-solo-staccato-A#5-V127-WUSR.aif" name="94(A#5)-127" rootNote="94" loNote="94" hiNote="94" loVel="0" hiVel="127" start="383" end="43136" seqPosition="2"/>
+      <sample path="samples/1st-violin-solo-staccato-B5-V127-T5K6.aif" name="95(B5)-127" rootNote="95" loNote="95" hiNote="95" loVel="0" hiVel="127" start="183" end="35200" seqPosition="2"/>
+      <sample path="samples/1st-violin-solo-staccato-C6-V127-K0GG.aif" name="96(C6)-127" rootNote="96" loNote="96" hiNote="96" loVel="0" hiVel="127" start="183" end="32988" seqPosition="2"/>
+      <sample path="samples/1st-violin-solo-staccato-C#6-V127-OO8R.aif" name="97(C#6)-127" rootNote="97" loNote="97" hiNote="97" loVel="0" hiVel="127" start="455" end="27963" seqPosition="2"/>
+      <sample path="samples/1st-violin-solo-staccato-D6-V127-O7SC.aif" name="98(D6)-127" rootNote="98" loNote="98" hiNote="98" loVel="0" hiVel="127" start="587" end="26536" seqPosition="2"/>
+      <sample path="samples/1st-violin-solo-staccato-D#6-V127-OK10.aif" name="99(D#6)-127" rootNote="99" loNote="99" hiNote="99" loVel="0" hiVel="127" start="267" end="24844" seqPosition="2"/>
+      <sample path="samples/1st-violin-solo-staccato-E6-V127-8YDJ.aif" name="100(E6)-127" rootNote="100" loNote="100" hiNote="100" loVel="0" hiVel="127" start="103" end="23316" seqPosition="2"/>
+      <sample path="samples/1st-violin-solo-staccato-F6-V127-7R7A.aif" name="101(F6)-127" rootNote="101" loNote="101" hiNote="101" loVel="0" hiVel="127" start="555" end="22456" seqPosition="2"/>
+      <sample path="samples/1st-violin-solo-staccato-F#6-V127-GO31.aif" name="102(F#6)-127" rootNote="102" loNote="102" hiNote="102" loVel="0" hiVel="127" start="375" end="20992" seqPosition="2"/>
+      <sample path="samples/1st-violin-solo-staccato-G6-V127-3DB2.aif" name="103(G6)-127" rootNote="103" loNote="103" hiNote="103" loVel="0" hiVel="127" start="627" end="20116" seqPosition="2"/>
+      <sample path="samples/1st-violin-solo-staccato-G#6-V127-HF1L.aif" name="104(G#6)-127" rootNote="104" loNote="104" hiNote="104" loVel="0" hiVel="127" start="391" end="18755" seqPosition="2"/>
+      <sample path="samples/1st-violin-solo-staccato-A6-V127-19D8.aif" name="105(A6)-127" rootNote="105" loNote="105" hiNote="105" loVel="0" hiVel="127" start="671" end="18000" seqPosition="2"/>
+      <effects/>
+    </group>
+    <group name="1st-violin-solo-tremolo" enabled="false">
+      <sample path="samples/1st-violin-solo-tremolo-G2-V127-V7U5.aif" name="55(G2)-127" rootNote="55" loNote="24" hiNote="55" loVel="1" hiVel="127" start="575" end="510611" loopEnabled="1" loopStart="207013" loopEnd="308288" loopCrossfade="1687" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-tremolo-G#2-V127-Y0JT.aif" name="56(G#2)-127" rootNote="56" loNote="56" hiNote="56" loVel="0" hiVel="127" start="547" end="512260" loopEnabled="1" loopStart="197538" loopEnd="282474" loopCrossfade="1415" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-tremolo-A2-V127-1PLL.aif" name="57(A2)-127" rootNote="57" loNote="57" hiNote="57" loVel="0" hiVel="127" start="99" end="510336" loopEnabled="1" loopStart="106322" loopEnd="347848" loopCrossfade="2212" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-tremolo-A#2-V127-09NH.aif" name="58(A#2)-127" rootNote="58" loNote="58" hiNote="58" loVel="0" hiVel="127" start="215" end="512256" loopEnabled="1" loopStart="96334" loopEnd="236562" loopCrossfade="2002" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-tremolo-B2-V127-ELVZ.aif" name="59(B2)-127" rootNote="59" loNote="59" hiNote="59" loVel="0" hiVel="127" start="463" end="511619" loopEnabled="1" loopStart="291295" loopEnd="379463" loopCrossfade="1469" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-tremolo-C3-V127-RQ22.aif" name="60(C3)-127" rootNote="60" loNote="60" hiNote="60" loVel="0" hiVel="127" start="363" end="510210" loopEnabled="1" loopStart="236829" loopEnd="355809" loopCrossfade="1983" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-tremolo-C#3-V127-WUR1.aif" name="61(C#3)-127" rootNote="61" loNote="61" hiNote="61" loVel="0" hiVel="127" start="367" end="511622" loopEnabled="1" loopStart="292835" loopEnd="405520" loopCrossfade="1878" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-tremolo-D3-V127-ME98.aif" name="62(D3)-127" rootNote="62" loNote="62" hiNote="62" loVel="0" hiVel="127" start="587" end="518400" loopEnabled="1" loopStart="130869" loopEnd="281269" loopCrossfade="2506" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-tremolo-D#3-V127-7TFR.aif" name="63(D#3)-127" rootNote="63" loNote="63" hiNote="63" loVel="0" hiVel="127" start="331" end="511616" loopEnabled="1" loopStart="154943" loopEnd="367949" loopCrossfade="3221" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-tremolo-E3-V127-UKED.aif" name="64(E3)-127" rootNote="64" loNote="64" hiNote="64" loVel="0" hiVel="127" start="539" end="517632" loopEnabled="1" loopStart="92170" loopEnd="287882" loopCrossfade="1908" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-tremolo-F3-V127-H6J9.aif" name="65(F3)-127" rootNote="65" loNote="65" hiNote="65" loVel="0" hiVel="127" start="491" end="509583" loopEnabled="1" loopStart="113028" loopEnd="390648" loopCrossfade="2344" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-tremolo-F#3-V127-NONZ.aif" name="66(F#3)-127" rootNote="66" loNote="66" hiNote="66" loVel="0" hiVel="127" start="139" end="511488" loopEnabled="1" loopStart="88590" loopEnd="405188" loopCrossfade="1842" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-tremolo-G3-V127-T48E.aif" name="67(G3)-127" rootNote="67" loNote="67" hiNote="67" loVel="0" hiVel="127" start="315" end="511104" loopEnabled="1" loopStart="103572" loopEnd="401435" loopCrossfade="2151" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-tremolo-G#3-V127-5S0G.aif" name="68(G#3)-127" rootNote="68" loNote="68" hiNote="68" loVel="0" hiVel="127" start="263" end="511872" loopEnabled="1" loopStart="114632" loopEnd="340213" loopCrossfade="2382" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-tremolo-A3-V127-F5I4.aif" name="69(A3)-127" rootNote="69" loNote="69" hiNote="69" loVel="0" hiVel="127" start="459" end="511105" loopEnabled="1" loopStart="117032" loopEnd="338938" loopCrossfade="2428" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-tremolo-A#3-V127-CKNX.aif" name="70(A#3)-127" rootNote="70" loNote="70" hiNote="70" loVel="0" hiVel="127" start="251" end="509056" loopEnabled="1" loopStart="187552" loopEnd="383206" loopCrossfade="3260" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-tremolo-B3-V127-OWZC.aif" name="71(B3)-127" rootNote="71" loNote="71" hiNote="71" loVel="0" hiVel="127" start="131" end="511363" loopEnabled="1" loopStart="121249" loopEnd="396762" loopCrossfade="2523" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-tremolo-C4-V127-5XED.aif" name="72(C4)-127" rootNote="72" loNote="72" hiNote="72" loVel="0" hiVel="127" start="71" end="509323" loopEnabled="1" loopStart="113600" loopEnd="301357" loopCrossfade="2365" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-tremolo-C#4-V127-Q3QJ.aif" name="73(C#4)-127" rootNote="73" loNote="73" hiNote="73" loVel="0" hiVel="127" start="511" end="510208" loopEnabled="1" loopStart="142868" loopEnd="293788" loopCrossfade="2348" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-tremolo-D4-V127-NV97.aif" name="74(D4)-127" rootNote="74" loNote="74" hiNote="74" loVel="0" hiVel="127" start="311" end="512512" loopEnabled="1" loopStart="135383" loopEnd="291262" loopCrossfade="2597" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-tremolo-D#4-V127-65LL.aif" name="75(D#4)-127" rootNote="75" loNote="75" hiNote="75" loVel="0" hiVel="127" start="339" end="511232" loopEnabled="1" loopStart="128160" loopEnd="275739" loopCrossfade="2459" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-tremolo-E4-V127-UJNS.aif" name="76(E4)-127" rootNote="76" loNote="76" hiNote="76" loVel="0" hiVel="127" start="436" end="508672" loopEnabled="1" loopStart="107487" loopEnd="270480" loopCrossfade="2230" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-tremolo-F4-V127-IZRB.aif" name="77(F4)-127" rootNote="77" loNote="77" hiNote="77" loVel="0" hiVel="127" start="404" end="508672" loopEnabled="1" loopStart="101457" loopEnd="255359" loopCrossfade="2105" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-tremolo-F#4-V127-KFNK.aif" name="78(F#4)-127" rootNote="78" loNote="78" hiNote="78" loVel="0" hiVel="127" start="395" end="511488" loopEnabled="1" loopStart="239131" loopEnd="375119" loopCrossfade="2265" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-tremolo-G4-V127-WL9M.aif" name="79(G4)-127" rootNote="79" loNote="79" hiNote="79" loVel="0" hiVel="127" start="307" end="509826" loopEnabled="1" loopStart="97467" loopEnd="354651" loopCrossfade="2024" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-tremolo-G#4-V127-HH3P.aif" name="80(G#4)-127" rootNote="80" loNote="80" hiNote="80" loVel="0" hiVel="127" start="311" end="509568" loopEnabled="1" loopStart="270839" loopEnd="398138" loopCrossfade="2121" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-tremolo-A4-V127-JNT8.aif" name="81(A4)-127" rootNote="81" loNote="81" hiNote="81" loVel="0" hiVel="127" start="411" end="510080" loopEnabled="1" loopStart="130632" loopEnd="250604" loopCrossfade="1999" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-tremolo-A#4-V127-5OHN.aif" name="82(A#4)-127" rootNote="82" loNote="82" hiNote="82" loVel="0" hiVel="127" start="163" end="509963" loopEnabled="1" loopStart="144040" loopEnd="378820" loopCrossfade="2997" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-tremolo-B4-V127-SRZC.aif" name="83(B4)-127" rootNote="83" loNote="83" hiNote="83" loVel="0" hiVel="127" start="551" end="515712" loopEnabled="1" loopStart="183323" loopEnd="294215" loopCrossfade="1848" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-tremolo-C5-V127-0VBI.aif" name="84(C5)-127" rootNote="84" loNote="84" hiNote="84" loVel="0" hiVel="127" start="547" end="511360" loopEnabled="1" loopStart="155923" loopEnd="283086" loopCrossfade="2119" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-tremolo-C#5-V127-6R3P.aif" name="85(C#5)-127" rootNote="85" loNote="85" hiNote="85" loVel="0" hiVel="127" start="511" end="511104" loopEnabled="1" loopStart="146571" loopEnd="266181" loopCrossfade="1993" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-tremolo-D5-V127-PXGY.aif" name="86(D5)-127" rootNote="86" loNote="86" hiNote="86" loVel="0" hiVel="127" start="335" end="509440" loopEnabled="1" loopStart="151149" loopEnd="406171" loopCrossfade="3141" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-tremolo-D#5-V127-U6ZY.aif" name="87(D#5)-127" rootNote="87" loNote="87" hiNote="87" loVel="0" hiVel="127" start="139" end="509569" loopEnabled="1" loopStart="154735" loopEnd="395277" loopCrossfade="3220" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-tremolo-E5-V127-787Z.aif" name="88(E5)-127" rootNote="88" loNote="88" hiNote="88" loVel="0" hiVel="127" start="175" end="512257" loopEnabled="1" loopStart="198614" loopEnd="313549" loopCrossfade="1915" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-tremolo-F5-V127-0OKK.aif" name="89(F5)-127" rootNote="89" loNote="89" hiNote="89" loVel="0" hiVel="127" start="383" end="510336" loopEnabled="1" loopStart="111053" loopEnd="329242" loopCrossfade="2305" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-tremolo-F#5-V127-3VBZ.aif" name="90(F#5)-127" rootNote="90" loNote="90" hiNote="90" loVel="0" hiVel="127" start="467" end="508035" loopEnabled="1" loopStart="201584" loopEnd="280376" loopCrossfade="1313" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-tremolo-G5-V127-EW56.aif" name="91(G5)-127" rootNote="91" loNote="91" hiNote="91" loVel="0" hiVel="127" start="211" end="508677" loopEnabled="1" loopStart="190367" loopEnd="264868" loopCrossfade="1241" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-tremolo-G#5-V127-U4HV.aif" name="92(G#5)-127" rootNote="92" loNote="92" hiNote="92" loVel="0" hiVel="127" start="419" end="511233" loopEnabled="1" loopStart="133830" loopEnd="389674" loopCrossfade="2779" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-tremolo-A5-V127-RD8H.aif" name="93(A5)-127" rootNote="93" loNote="93" hiNote="93" loVel="0" hiVel="127" start="591" end="512512" loopEnabled="1" loopStart="154741" loopEnd="395475" loopCrossfade="3211" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-tremolo-A#5-V127-KR38.aif" name="94(A#5)-127" rootNote="94" loNote="94" hiNote="94" loVel="0" hiVel="127" start="83" end="509952" loopEnabled="1" loopStart="230599" loopEnd="380249" loopCrossfade="2494" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-tremolo-B5-V127-OWE6.aif" name="95(B5)-127" rootNote="95" loNote="95" hiNote="95" loVel="0" hiVel="127" start="519" end="507520" loopEnabled="1" loopStart="130933" loopEnd="272380" loopCrossfade="2355" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-tremolo-C6-V127-M3L9.aif" name="96(C6)-127" rootNote="96" loNote="96" hiNote="96" loVel="0" hiVel="127" start="307" end="508928" loopEnabled="1" loopStart="123294" loopEnd="390831" loopCrossfade="2562" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-tremolo-C#6-V127-D9MR.aif" name="97(C#6)-127" rootNote="97" loNote="97" hiNote="97" loVel="0" hiVel="127" start="423" end="510720" loopEnabled="1" loopStart="116446" loopEnd="242450" loopCrossfade="2100" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-tremolo-D6-V127-2B9V.aif" name="98(D6)-127" rootNote="98" loNote="98" hiNote="98" loVel="0" hiVel="127" start="475" end="511235" loopEnabled="1" loopStart="229119" loopEnd="348026" loopCrossfade="1980" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-tremolo-D#6-V127-92V0.aif" name="99(D#6)-127" rootNote="99" loNote="99" hiNote="99" loVel="0" hiVel="127" start="67" end="509056" loopEnabled="1" loopStart="103741" loopEnd="216076" loopCrossfade="1872" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-tremolo-E6-V127-RQ8R.aif" name="100(E6)-127" rootNote="100" loNote="100" hiNote="100" loVel="0" hiVel="127" start="407" end="509056" loopEnabled="1" loopStart="89842" loopEnd="407100" loopCrossfade="1863" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-tremolo-F6-V127-6ACU.aif" name="101(F6)-127" rootNote="101" loNote="101" hiNote="101" loVel="0" hiVel="127" start="443" end="511104" loopEnabled="1" loopStart="192224" loopEnd="391986" loopCrossfade="3329" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-tremolo-F#6-V127-21V3.aif" name="102(F#6)-127" rootNote="102" loNote="102" hiNote="102" loVel="0" hiVel="127" start="495" end="509954" loopEnabled="1" loopStart="87711" loopEnd="371251" loopCrossfade="1817" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-tremolo-G6-V127-OIDT.aif" name="103(G6)-127" rootNote="103" loNote="103" hiNote="103" loVel="0" hiVel="127" start="691" end="509575" loopEnabled="1" loopStart="138276" loopEnd="406355" loopCrossfade="2866" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-tremolo-G#6-V127-4VHW.aif" name="104(G#6)-127" rootNote="104" loNote="104" hiNote="104" loVel="0" hiVel="127" start="599" end="509059" loopEnabled="1" loopStart="202812" loopEnd="287011" loopCrossfade="1403" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-solo-tremolo-A6-V127-MIQ0.aif" name="105(A6)-127" rootNote="105" loNote="105" hiNote="105" loVel="0" hiVel="127" start="79" end="510080" loopEnabled="1" loopStart="93531" loopEnd="332247" loopCrossfade="1946" loopCrossfadeMode="equal_power"/>
+      <effects/>
+    </group>
+    <group name="1st-violin-solo-pluck" enabled="false">
+      <sample path="samples/1st-violin-solo-pluck-G2-V127-0GMR.aif" name="55(G2)-127" rootNote="55" loNote="24" hiNote="55" loVel="1" hiVel="127" start="524" end="55916"/>
+      <sample path="samples/1st-violin-solo-pluck-G#2-V127-GQ36.aif" name="56(G#2)-127" rootNote="56" loNote="56" hiNote="56" loVel="0" hiVel="127" start="200" end="52396"/>
+      <sample path="samples/1st-violin-solo-pluck-A2-V127-QUGE.aif" name="57(A2)-127" rootNote="57" loNote="57" hiNote="57" loVel="0" hiVel="127" start="628" end="49724"/>
+      <sample path="samples/1st-violin-solo-pluck-A#2-V127-T66E.aif" name="58(A#2)-127" rootNote="58" loNote="58" hiNote="58" loVel="0" hiVel="127" start="316" end="48404"/>
+      <sample path="samples/1st-violin-solo-pluck-B2-V127-TE79.aif" name="59(B2)-127" rootNote="59" loNote="59" hiNote="59" loVel="0" hiVel="127" start="380" end="63744"/>
+      <sample path="samples/1st-violin-solo-pluck-C3-V127-57KY.aif" name="60(C3)-127" rootNote="60" loNote="60" hiNote="60" loVel="0" hiVel="127" start="324" end="61952"/>
+      <sample path="samples/1st-violin-solo-pluck-C#3-V127-HO7H.aif" name="61(C#3)-127" rootNote="61" loNote="61" hiNote="61" loVel="0" hiVel="127" start="436" end="54948"/>
+      <sample path="samples/1st-violin-solo-pluck-D3-V127-7MLY.aif" name="62(D3)-127" rootNote="62" loNote="62" hiNote="62" loVel="0" hiVel="127" start="568" end="66176"/>
+      <sample path="samples/1st-violin-solo-pluck-D#3-V127-VZZS.aif" name="63(D#3)-127" rootNote="63" loNote="63" hiNote="63" loVel="0" hiVel="127" start="592" end="60136"/>
+      <sample path="samples/1st-violin-solo-pluck-E3-V127-5N1C.aif" name="64(E3)-127" rootNote="64" loNote="64" hiNote="64" loVel="0" hiVel="127" start="580" end="53652"/>
+      <sample path="samples/1st-violin-solo-pluck-F3-V127-8DGT.aif" name="65(F3)-127" rootNote="65" loNote="65" hiNote="65" loVel="0" hiVel="127" start="308" end="60224"/>
+      <sample path="samples/1st-violin-solo-pluck-F#3-V127-LI0D.aif" name="66(F#3)-127" rootNote="66" loNote="66" hiNote="66" loVel="0" hiVel="127" start="496" end="63356"/>
+      <sample path="samples/1st-violin-solo-pluck-G3-V127-31A9.aif" name="67(G3)-127" rootNote="67" loNote="67" hiNote="67" loVel="0" hiVel="127" start="472" end="77568"/>
+      <sample path="samples/1st-violin-solo-pluck-G#3-V127-IT8Y.aif" name="68(G#3)-127" rootNote="68" loNote="68" hiNote="68" loVel="0" hiVel="127" start="529" end="49552"/>
+      <sample path="samples/1st-violin-solo-pluck-A3-V127-RQF7.aif" name="69(A3)-127" rootNote="69" loNote="69" hiNote="69" loVel="0" hiVel="127" start="485" end="56448"/>
+      <sample path="samples/1st-violin-solo-pluck-A#3-V127-AHB6.aif" name="70(A#3)-127" rootNote="70" loNote="70" hiNote="70" loVel="0" hiVel="127" start="104" end="47460"/>
+      <sample path="samples/1st-violin-solo-pluck-B3-V127-ZXHP.aif" name="71(B3)-127" rootNote="71" loNote="71" hiNote="71" loVel="0" hiVel="127" start="548" end="48308"/>
+      <sample path="samples/1st-violin-solo-pluck-C4-V127-65SA.aif" name="72(C4)-127" rootNote="72" loNote="72" hiNote="72" loVel="0" hiVel="127" start="312" end="55296"/>
+      <sample path="samples/1st-violin-solo-pluck-C#4-V127-W6K4.aif" name="73(C#4)-127" rootNote="73" loNote="73" hiNote="73" loVel="0" hiVel="127" start="320" end="30620"/>
+      <sample path="samples/1st-violin-solo-pluck-D4-V127-8MHD.aif" name="74(D4)-127" rootNote="74" loNote="74" hiNote="74" loVel="0" hiVel="127" start="360" end="101800"/>
+      <sample path="samples/1st-violin-solo-pluck-D#4-V127-2YOV.aif" name="75(D#4)-127" rootNote="75" loNote="75" hiNote="75" loVel="0" hiVel="127" start="396" end="51840"/>
+      <sample path="samples/1st-violin-solo-pluck-E4-V127-5RNR.aif" name="76(E4)-127" rootNote="76" loNote="76" hiNote="76" loVel="0" hiVel="127" start="276" end="39752"/>
+      <sample path="samples/1st-violin-solo-pluck-F4-V127-29QT.aif" name="77(F4)-127" rootNote="77" loNote="77" hiNote="77" loVel="0" hiVel="127" start="516" end="50556"/>
+      <sample path="samples/1st-violin-solo-pluck-F#4-V127-QPZ7.aif" name="78(F#4)-127" rootNote="78" loNote="78" hiNote="78" loVel="0" hiVel="127" start="349" end="42808"/>
+      <sample path="samples/1st-violin-solo-pluck-G4-V127-LQ6E.aif" name="79(G4)-127" rootNote="79" loNote="79" hiNote="79" loVel="0" hiVel="127" start="332" end="65944"/>
+      <sample path="samples/1st-violin-solo-pluck-G#4-V127-RYKW.aif" name="80(G#4)-127" rootNote="80" loNote="80" hiNote="80" loVel="0" hiVel="127" start="226" end="44940"/>
+      <sample path="samples/1st-violin-solo-pluck-A4-V127-CNU4.aif" name="81(A4)-127" rootNote="81" loNote="81" hiNote="81" loVel="0" hiVel="127" start="608" end="66176"/>
+      <sample path="samples/1st-violin-solo-pluck-A#4-V127-7Z19.aif" name="82(A#4)-127" rootNote="82" loNote="82" hiNote="82" loVel="0" hiVel="127" start="308" end="37996"/>
+      <sample path="samples/1st-violin-solo-pluck-B4-V127-LFXN.aif" name="83(B4)-127" rootNote="83" loNote="83" hiNote="83" loVel="0" hiVel="127" start="188" end="37180"/>
+      <sample path="samples/1st-violin-solo-pluck-C5-V127-42BS.aif" name="84(C5)-127" rootNote="84" loNote="84" hiNote="84" loVel="0" hiVel="127" start="284" end="42368"/>
+      <sample path="samples/1st-violin-solo-pluck-C#5-V127-GNLG.aif" name="85(C#5)-127" rootNote="85" loNote="85" hiNote="85" loVel="0" hiVel="127" start="136" end="34932"/>
+      <sample path="samples/1st-violin-solo-pluck-D5-V127-EZJL.aif" name="86(D5)-127" rootNote="86" loNote="86" hiNote="86" loVel="0" hiVel="127" start="264" end="33176"/>
+      <sample path="samples/1st-violin-solo-pluck-D#5-V127-RBSX.aif" name="87(D#5)-127" rootNote="87" loNote="87" hiNote="87" loVel="0" hiVel="127" start="224" end="48512"/>
+      <sample path="samples/1st-violin-solo-pluck-E5-V127-KCTZ.aif" name="88(E5)-127" rootNote="88" loNote="88" hiNote="88" loVel="0" hiVel="127" start="389" end="34260"/>
+      <sample path="samples/1st-violin-solo-pluck-F5-V127-5JJO.aif" name="89(F5)-127" rootNote="89" loNote="89" hiNote="89" loVel="0" hiVel="127" start="172" end="30532"/>
+      <sample path="samples/1st-violin-solo-pluck-F#5-V127-XTOD.aif" name="90(F#5)-127" rootNote="90" loNote="90" hiNote="90" loVel="0" hiVel="127" start="356" end="41216"/>
+      <sample path="samples/1st-violin-solo-pluck-G5-V127-C4WZ.aif" name="91(G5)-127" rootNote="91" loNote="91" hiNote="91" loVel="0" hiVel="127" start="456" end="33128"/>
+      <sample path="samples/1st-violin-solo-pluck-G#5-V127-UX1O.aif" name="92(G#5)-127" rootNote="92" loNote="92" hiNote="92" loVel="0" hiVel="127" start="320" end="30312"/>
+      <sample path="samples/1st-violin-solo-pluck-A5-V127-LQJM.aif" name="93(A5)-127" rootNote="93" loNote="93" hiNote="93" loVel="0" hiVel="127" start="236" end="30848"/>
+      <sample path="samples/1st-violin-solo-pluck-A#5-V127-SXKB.aif" name="94(A#5)-127" rootNote="94" loNote="94" hiNote="94" loVel="0" hiVel="127" start="384" end="32856"/>
+      <sample path="samples/1st-violin-solo-pluck-B5-V127-SW2E.aif" name="95(B5)-127" rootNote="95" loNote="95" hiNote="95" loVel="0" hiVel="127" start="348" end="25060"/>
+      <sample path="samples/1st-violin-solo-pluck-C6-V127-LZ0Q.aif" name="96(C6)-127" rootNote="96" loNote="96" hiNote="96" loVel="0" hiVel="127" start="588" end="24000"/>
+      <sample path="samples/1st-violin-solo-pluck-C#6-V127-6SLU.aif" name="97(C#6)-127" rootNote="97" loNote="97" hiNote="97" loVel="0" hiVel="127" start="196" end="22264"/>
+      <sample path="samples/1st-violin-solo-pluck-D6-V127-DYT4.aif" name="98(D6)-127" rootNote="98" loNote="98" hiNote="98" loVel="0" hiVel="127" start="560" end="21300"/>
+      <sample path="samples/1st-violin-solo-pluck-D#6-V127-JD61.aif" name="99(D#6)-127" rootNote="99" loNote="99" hiNote="99" loVel="0" hiVel="127" start="528" end="20132"/>
+      <sample path="samples/1st-violin-solo-pluck-E6-V127-KSZI.aif" name="100(E6)-127" rootNote="100" loNote="100" hiNote="100" loVel="0" hiVel="127" start="344" end="18828"/>
+      <sample path="samples/1st-violin-solo-pluck-F6-V127-7YPQ.aif" name="101(F6)-127" rootNote="101" loNote="101" hiNote="101" loVel="0" hiVel="127" start="212" end="17748"/>
+      <sample path="samples/1st-violin-solo-pluck-F#6-V127-P4C6.aif" name="102(F#6)-127" rootNote="102" loNote="102" hiNote="102" loVel="0" hiVel="127" start="364" end="16872"/>
+      <sample path="samples/1st-violin-solo-pluck-G6-V127-NH73.aif" name="103(G6)-127" rootNote="103" loNote="103" hiNote="103" loVel="0" hiVel="127" start="600" end="16204"/>
+      <sample path="samples/1st-violin-solo-pluck-G#6-V127-206Y.aif" name="104(G#6)-127" rootNote="104" loNote="104" hiNote="104" loVel="0" hiVel="127" start="332" end="14984"/>
+      <sample path="samples/1st-violin-solo-pluck-A6-V127-VA3Q.aif" name="105(A6)-127" rootNote="105" loNote="105" hiNote="105" loVel="0" hiVel="127" start="508" end="14404"/>
+      <effects/>
+    </group>
+    <group name="1st-violin-sus-normal" enabled="false">
+      <sample path="samples/1st-violin-sus-normal-G2-V127-M7QB.aif" name="55(G2)-127" rootNote="55" loNote="24" hiNote="55" loVel="1" hiVel="127" start="490" end="520579" loopEnabled="1" loopStart="136601" loopEnd="348331" loopCrossfade="2835" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-normal-G#2-V127-ELC9.aif" name="56(G#2)-127" rootNote="56" loNote="56" hiNote="56" loVel="0" hiVel="127" start="362" end="525952" loopEnabled="1" loopStart="129193" loopEnd="229627" loopCrossfade="1670" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-normal-A2-V127-XQP4.aif" name="57(A2)-127" rootNote="57" loNote="57" hiNote="57" loVel="0" hiVel="127" start="510" end="524800" loopEnabled="1" loopStart="252610" loopEnd="365250" loopCrossfade="1877" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-normal-A#2-V127-HABB.aif" name="58(A#2)-127" rootNote="58" loNote="58" hiNote="58" loVel="0" hiVel="127" start="425" end="526720" loopEnabled="1" loopStart="239187" loopEnd="345868" loopCrossfade="1778" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-normal-B2-V127-2E4Q.aif" name="59(B2)-127" rootNote="59" loNote="59" hiNote="59" loVel="0" hiVel="127" start="408" end="527104" loopEnabled="1" loopStart="125432" loopEnd="327719" loopCrossfade="2604" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-normal-C3-V127-FA9L.aif" name="60(C3)-127" rootNote="60" loNote="60" hiNote="60" loVel="0" hiVel="127" start="534" end="525824" loopEnabled="1" loopStart="238017" loopEnd="336583" loopCrossfade="1642" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-normal-C#3-V127-1HDI.aif" name="61(C#3)-127" rootNote="61" loNote="61" hiNote="61" loVel="0" hiVel="127" start="250" end="526464" loopEnabled="1" loopStart="224173" loopEnd="317135" loopCrossfade="1549" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-normal-D3-V127-ISOF.aif" name="62(D3)-127" rootNote="62" loNote="62" hiNote="62" loVel="0" hiVel="127" start="554" end="526720" loopEnabled="1" loopStart="300126" loopEnd="388084" loopCrossfade="1465" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-normal-D#3-V127-1I9N.aif" name="63(D#3)-127" rootNote="63" loNote="63" hiNote="63" loVel="0" hiVel="127" start="509" end="526336" loopEnabled="1" loopStart="202512" loopEnd="354787" loopCrossfade="2537" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-normal-E3-V127-9VM1.aif" name="64(E3)-127" rootNote="64" loNote="64" hiNote="64" loVel="0" hiVel="127" start="341" end="518918" loopEnabled="1" loopStart="125503" loopEnd="272988" loopCrossfade="2392" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-normal-F3-V127-RQI6.aif" name="65(F3)-127" rootNote="65" loNote="65" hiNote="65" loVel="0" hiVel="127" start="569" end="518272" loopEnabled="1" loopStart="118800" loopEnd="329896" loopCrossfade="2463" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-normal-F#3-V127-0F7R.aif" name="66(F#3)-127" rootNote="66" loNote="66" hiNote="66" loVel="0" hiVel="127" start="234" end="517760" loopEnabled="1" loopStart="238108" loopEnd="356558" loopCrossfade="1974" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-normal-G3-V127-ODS3.aif" name="67(G3)-127" rootNote="67" loNote="67" hiNote="67" loVel="0" hiVel="127" start="354" end="521472" loopEnabled="1" loopStart="110168" loopEnd="334324" loopCrossfade="2287" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-normal-G#3-V127-V90T.aif" name="68(G#3)-127" rootNote="68" loNote="68" hiNote="68" loVel="0" hiVel="127" start="474" end="524800" loopEnabled="1" loopStart="136897" loopEnd="242466" loopCrossfade="1759" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-normal-A3-V127-IKEN.aif" name="69(A3)-127" rootNote="69" loNote="69" hiNote="69" loVel="0" hiVel="127" start="42" end="521216" loopEnabled="1" loopStart="157490" loopEnd="361450" loopCrossfade="3280" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-normal-A#3-V127-WFE2.aif" name="70(A#3)-127" rootNote="70" loNote="70" hiNote="70" loVel="0" hiVel="127" start="262" end="518528" loopEnabled="1" loopStart="117309" loopEnd="381006" loopCrossfade="2438" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-normal-B3-V127-8V4S.aif" name="71(B3)-127" rootNote="71" loNote="71" hiNote="71" loVel="0" hiVel="127" start="482" end="519040" loopEnabled="1" loopStart="183097" loopEnd="273984" loopCrossfade="1514" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-normal-C4-V127-ZKBD.aif" name="72(C4)-127" rootNote="72" loNote="72" hiNote="72" loVel="0" hiVel="127" start="138" end="518912" loopEnabled="1" loopStart="129604" loopEnd="385033" loopCrossfade="2697" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-normal-C#4-V127-P534.aif" name="73(C#4)-127" rootNote="73" loNote="73" hiNote="73" loVel="0" hiVel="127" start="594" end="526592" loopEnabled="1" loopStart="226085" loopEnd="346955" loopCrossfade="2014" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-normal-D4-V127-4I41.aif" name="74(D4)-127" rootNote="74" loNote="74" hiNote="74" loVel="0" hiVel="127" start="206" end="519051" loopEnabled="1" loopStart="212333" loopEnd="326156" loopCrossfade="1897" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-normal-D#4-V127-8434.aif" name="75(D#4)-127" rootNote="75" loNote="75" hiNote="75" loVel="0" hiVel="127" start="114" end="516610" loopEnabled="1" loopStart="134638" loopEnd="302798" loopCrossfade="2801" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-normal-E4-V127-DZ5J.aif" name="76(E4)-127" rootNote="76" loNote="76" hiNote="76" loVel="0" hiVel="127" start="566" end="526080" loopEnabled="1" loopStart="88847" loopEnd="340678" loopCrossfade="1839" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-normal-F4-V127-CAQO.aif" name="77(F4)-127" rootNote="77" loNote="77" hiNote="77" loVel="0" hiVel="127" start="626" end="526720" loopEnabled="1" loopStart="226675" loopEnd="376488" loopCrossfade="2496" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-normal-F#4-V127-9WU9.aif" name="78(F#4)-127" rootNote="78" loNote="78" hiNote="78" loVel="0" hiVel="127" start="215" end="526720" loopEnabled="1" loopStart="231172" loopEnd="353149" loopCrossfade="2032" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-normal-G4-V127-BD3H.aif" name="79(G4)-127" rootNote="79" loNote="79" hiNote="79" loVel="0" hiVel="127" start="547" end="518530" loopEnabled="1" loopStart="207235" loopEnd="323073" loopCrossfade="1930" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-normal-G#4-V127-UVKB.aif" name="80(G#4)-127" rootNote="80" loNote="80" hiNote="80" loVel="0" hiVel="127" start="115" end="526336" loopEnabled="1" loopStart="206960" loopEnd="316227" loopCrossfade="1821" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-normal-A4-V127-M3GE.aif" name="81(A4)-127" rootNote="81" loNote="81" hiNote="81" loVel="0" hiVel="127" start="401" end="519170" loopEnabled="1" loopStart="254592" loopEnd="340618" loopCrossfade="1433" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-normal-A#4-V127-0AIK.aif" name="82(A#4)-127" rootNote="82" loNote="82" hiNote="82" loVel="0" hiVel="127" start="369" end="518784" loopEnabled="1" loopStart="320877" loopEnd="401869" loopCrossfade="1349" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-normal-B4-V127-BHKV.aif" name="83(B4)-127" rootNote="83" loNote="83" hiNote="83" loVel="0" hiVel="127" start="353" end="519552" loopEnabled="1" loopStart="225699" loopEnd="378351" loopCrossfade="2544" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-normal-C5-V127-HKED.aif" name="84(C5)-127" rootNote="84" loNote="84" hiNote="84" loVel="0" hiVel="127" start="427" end="525824" loopEnabled="1" loopStart="135511" loopEnd="351004" loopCrossfade="2814" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-normal-C#5-V127-JNQ3.aif" name="85(C#5)-127" rootNote="85" loNote="85" hiNote="85" loVel="0" hiVel="127" start="403" end="527104" loopEnabled="1" loopStart="229229" loopEnd="338930" loopCrossfade="1828" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-normal-D5-V127-MQ2X.aif" name="86(D5)-127" rootNote="86" loNote="86" hiNote="86" loVel="0" hiVel="127" start="462" end="527104" loopEnabled="1" loopStart="173374" loopEnd="381431" loopCrossfade="3467" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-normal-D#5-V127-IWZR.aif" name="87(D#5)-127" rootNote="87" loNote="87" hiNote="87" loVel="0" hiVel="127" start="390" end="526208" loopEnabled="1" loopStart="180675" loopEnd="369775" loopCrossfade="2981" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-normal-E5-V127-K4KF.aif" name="88(E5)-127" rootNote="88" loNote="88" hiNote="88" loVel="0" hiVel="127" start="326" end="518785" loopEnabled="1" loopStart="291043" loopEnd="375212" loopCrossfade="1402" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-normal-F5-V127-S469.aif" name="89(F5)-127" rootNote="89" loNote="89" hiNote="89" loVel="0" hiVel="127" start="202" end="519424" loopEnabled="1" loopStart="191479" loopEnd="350228" loopCrossfade="2645" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-normal-F#5-V127-7R9P.aif" name="90(F#5)-127" rootNote="90" loNote="90" hiNote="90" loVel="0" hiVel="127" start="430" end="526720" loopEnabled="1" loopStart="247410" loopEnd="346702" loopCrossfade="1654" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-normal-G5-V127-9E23.aif" name="91(G5)-127" rootNote="91" loNote="91" hiNote="91" loVel="0" hiVel="127" start="666" end="520576" loopEnabled="1" loopStart="226930" loopEnd="320895" loopCrossfade="1566" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-normal-G#5-V127-0C2O.aif" name="92(G#5)-127" rootNote="92" loNote="92" hiNote="92" loVel="0" hiVel="127" start="586" end="526080" loopEnabled="1" loopStart="131945" loopEnd="375735" loopCrossfade="2736" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-normal-A5-V127-53M6.aif" name="93(A5)-127" rootNote="93" loNote="93" hiNote="93" loVel="0" hiVel="127" start="538" end="518148" loopEnabled="1" loopStart="192665" loopEnd="343443" loopCrossfade="2512" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-normal-A#5-V127-K6H8.aif" name="94(A#5)-127" rootNote="94" loNote="94" hiNote="94" loVel="0" hiVel="127" start="274" end="518785" loopEnabled="1" loopStart="243857" loopEnd="386489" loopCrossfade="2377" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-normal-B5-V127-J9XI.aif" name="95(B5)-127" rootNote="95" loNote="95" hiNote="95" loVel="0" hiVel="127" start="137" end="521600" loopEnabled="1" loopStart="126037" loopEnd="395189" loopCrossfade="2622" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-normal-C6-V127-QSZV.aif" name="96(C6)-127" rootNote="96" loNote="96" hiNote="96" loVel="0" hiVel="127" start="417" end="521472" loopEnabled="1" loopStart="147024" loopEnd="399807" loopCrossfade="3054" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-normal-C#6-V127-1G9F.aif" name="97(C#6)-127" rootNote="97" loNote="97" hiNote="97" loVel="0" hiVel="127" start="541" end="526080" loopEnabled="1" loopStart="138962" loopEnd="377645" loopCrossfade="2883" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-normal-D6-V127-PYYJ.aif" name="98(D6)-127" rootNote="98" loNote="98" hiNote="98" loVel="0" hiVel="127" start="145" end="527104" loopEnabled="1" loopStart="180688" loopEnd="293385" loopCrossfade="1878" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-normal-D#6-V127-TDR8.aif" name="99(D#6)-127" rootNote="99" loNote="99" hiNote="99" loVel="0" hiVel="127" start="305" end="526336" loopEnabled="1" loopStart="124345" loopEnd="338298" loopCrossfade="2584" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-normal-E6-V127-12DZ.aif" name="100(E6)-127" rootNote="100" loNote="100" hiNote="100" loVel="0" hiVel="127" start="589" end="524800" loopEnabled="1" loopStart="127889" loopEnd="228392" loopCrossfade="1675" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-normal-F6-V127-B1OU.aif" name="101(F6)-127" rootNote="101" loNote="101" hiNote="101" loVel="0" hiVel="127" start="525" end="526848" loopEnabled="1" loopStart="110754" loopEnd="205993" loopCrossfade="1587" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-normal-F#6-V127-ZJH2.aif" name="102(F#6)-127" rootNote="102" loNote="102" hiNote="102" loVel="0" hiVel="127" start="309" end="527744" loopEnabled="1" loopStart="103933" loopEnd="283006" loopCrossfade="2158" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-normal-G6-V127-6T9J.aif" name="103(G6)-127" rootNote="103" loNote="103" hiNote="103" loVel="0" hiVel="127" start="469" end="526720" loopEnabled="1" loopStart="135650" loopEnd="304500" loopCrossfade="2814" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-normal-G#6-V127-QT16.aif" name="104(G#6)-127" rootNote="104" loNote="104" hiNote="104" loVel="0" hiVel="127" start="221" end="518528" loopEnabled="1" loopStart="128283" loopEnd="208302" loopCrossfade="1333" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-normal-A6-V127-B58N.aif" name="105(A6)-127" rootNote="105" loNote="105" hiNote="105" loVel="0" hiVel="127" start="161" end="519812" loopEnabled="1" loopStart="87111" loopEnd="313246" loopCrossfade="1811" loopCrossfadeMode="equal_power"/>
+      <effects/>
+    </group>
+    <group name="1st-violin-staccato RR:1" seqPosition="1" enabled="false">
+      <sample path="samples/1st-violin-staccato-G2-V127-0BAV.aif" name="55(G2)-127" rootNote="55" loNote="24" hiNote="55" loVel="1" hiVel="127" start="683" end="42624"/>
+      <sample path="samples/1st-violin-staccato-G#2-V127-ENHA.aif" name="56(G#2)-127" rootNote="56" loNote="56" hiNote="56" loVel="0" hiVel="127" start="351" end="30602"/>
+      <sample path="samples/1st-violin-staccato-A2-V127-QQ05.aif" name="57(A2)-127" rootNote="57" loNote="57" hiNote="57" loVel="0" hiVel="127" start="479" end="34484"/>
+      <sample path="samples/1st-violin-staccato-A#2-V127-CYNM.aif" name="58(A#2)-127" rootNote="58" loNote="58" hiNote="58" loVel="0" hiVel="127" start="356" end="32524"/>
+      <sample path="samples/1st-violin-staccato-B2-V127-3N10.aif" name="59(B2)-127" rootNote="59" loNote="59" hiNote="59" loVel="0" hiVel="127" start="562" end="30816"/>
+      <sample path="samples/1st-violin-staccato-C3-V127-DV2D.aif" name="60(C3)-127" rootNote="60" loNote="60" hiNote="60" loVel="0" hiVel="127" start="259" end="35676"/>
+      <sample path="samples/1st-violin-staccato-C#3-V127-7CZ4.aif" name="61(C#3)-127" rootNote="61" loNote="61" hiNote="61" loVel="0" hiVel="127" start="472" end="34108"/>
+      <sample path="samples/1st-violin-staccato-D3-V127-1EUJ.aif" name="62(D3)-127" rootNote="62" loNote="62" hiNote="62" loVel="0" hiVel="127" start="520" end="41600"/>
+      <sample path="samples/1st-violin-staccato-D#3-V127-M2TQ.aif" name="63(D#3)-127" rootNote="63" loNote="63" hiNote="63" loVel="0" hiVel="127" start="393" end="33250"/>
+      <sample path="samples/1st-violin-staccato-E3-V127-VSV2.aif" name="64(E3)-127" rootNote="64" loNote="64" hiNote="64" loVel="0" hiVel="127" start="174" end="31159"/>
+      <sample path="samples/1st-violin-staccato-F3-V127-JNV6.aif" name="65(F3)-127" rootNote="65" loNote="65" hiNote="65" loVel="0" hiVel="127" start="155" end="29569"/>
+      <sample path="samples/1st-violin-staccato-F#3-V127-GCUT.aif" name="66(F#3)-127" rootNote="66" loNote="66" hiNote="66" loVel="0" hiVel="127" start="359" end="43648"/>
+      <sample path="samples/1st-violin-staccato-G3-V127-2AM6.aif" name="67(G3)-127" rootNote="67" loNote="67" hiNote="67" loVel="0" hiVel="127" start="67" end="41344"/>
+      <sample path="samples/1st-violin-staccato-G#3-V127-RR70.aif" name="68(G#3)-127" rootNote="68" loNote="68" hiNote="68" loVel="0" hiVel="127" start="415" end="30392"/>
+      <sample path="samples/1st-violin-staccato-A3-V127-MXP5.aif" name="69(A3)-127" rootNote="69" loNote="69" hiNote="69" loVel="0" hiVel="127" start="172" end="41984"/>
+      <sample path="samples/1st-violin-staccato-A#3-V127-0M82.aif" name="70(A#3)-127" rootNote="70" loNote="70" hiNote="70" loVel="0" hiVel="127" start="373" end="30903"/>
+      <sample path="samples/1st-violin-staccato-B3-V127-P6AG.aif" name="71(B3)-127" rootNote="71" loNote="71" hiNote="71" loVel="0" hiVel="127" start="482" end="29284"/>
+      <sample path="samples/1st-violin-staccato-C4-V127-KRWA.aif" name="72(C4)-127" rootNote="72" loNote="72" hiNote="72" loVel="0" hiVel="127" start="497" end="34949"/>
+      <sample path="samples/1st-violin-staccato-C#4-V127-L1R6.aif" name="73(C#4)-127" rootNote="73" loNote="73" hiNote="73" loVel="0" hiVel="127" start="498" end="43008"/>
+      <sample path="samples/1st-violin-staccato-D4-V127-OZHE.aif" name="74(D4)-127" rootNote="74" loNote="74" hiNote="74" loVel="0" hiVel="127" start="531" end="40832"/>
+      <sample path="samples/1st-violin-staccato-D#4-V127-RD8O.aif" name="75(D#4)-127" rootNote="75" loNote="75" hiNote="75" loVel="0" hiVel="127" start="620" end="46080"/>
+      <sample path="samples/1st-violin-staccato-E4-V127-FQSL.aif" name="76(E4)-127" rootNote="76" loNote="76" hiNote="76" loVel="0" hiVel="127" start="293" end="43776"/>
+      <sample path="samples/1st-violin-staccato-F4-V127-JTW7.aif" name="77(F4)-127" rootNote="77" loNote="77" hiNote="77" loVel="0" hiVel="127" start="505" end="32308"/>
+      <sample path="samples/1st-violin-staccato-F#4-V127-4DSU.aif" name="78(F#4)-127" rootNote="78" loNote="78" hiNote="78" loVel="0" hiVel="127" start="87" end="30908"/>
+      <sample path="samples/1st-violin-staccato-G4-V127-FII3.aif" name="79(G4)-127" rootNote="79" loNote="79" hiNote="79" loVel="0" hiVel="127" start="483" end="29612"/>
+      <sample path="samples/1st-violin-staccato-G#4-V127-ZC1N.aif" name="80(G#4)-127" rootNote="80" loNote="80" hiNote="80" loVel="0" hiVel="127" start="127" end="37504"/>
+      <sample path="samples/1st-violin-staccato-A4-V127-NQRX.aif" name="81(A4)-127" rootNote="81" loNote="81" hiNote="81" loVel="0" hiVel="127" start="428" end="34403"/>
+      <sample path="samples/1st-violin-staccato-A#4-V127-UHP2.aif" name="82(A#4)-127" rootNote="82" loNote="82" hiNote="82" loVel="0" hiVel="127" start="585" end="32724"/>
+      <sample path="samples/1st-violin-staccato-B4-V127-G471.aif" name="83(B4)-127" rootNote="83" loNote="83" hiNote="83" loVel="0" hiVel="127" start="346" end="30659"/>
+      <sample path="samples/1st-violin-staccato-C5-V127-VMRY.aif" name="84(C5)-127" rootNote="84" loNote="84" hiNote="84" loVel="0" hiVel="127" start="289" end="32667"/>
+      <sample path="samples/1st-violin-staccato-C#5-V127-9WJK.aif" name="85(C#5)-127" rootNote="85" loNote="85" hiNote="85" loVel="0" hiVel="127" start="523" end="41344"/>
+      <sample path="samples/1st-violin-staccato-D5-V127-BU76.aif" name="86(D5)-127" rootNote="86" loNote="86" hiNote="86" loVel="0" hiVel="127" start="194" end="29188"/>
+      <sample path="samples/1st-violin-staccato-D#5-V127-WUL9.aif" name="87(D#5)-127" rootNote="87" loNote="87" hiNote="87" loVel="0" hiVel="127" start="227" end="44160"/>
+      <sample path="samples/1st-violin-staccato-E5-V127-3OHY.aif" name="88(E5)-127" rootNote="88" loNote="88" hiNote="88" loVel="0" hiVel="127" start="629" end="33012"/>
+      <sample path="samples/1st-violin-staccato-F5-V127-VHXQ.aif" name="89(F5)-127" rootNote="89" loNote="89" hiNote="89" loVel="0" hiVel="127" start="362" end="30847"/>
+      <sample path="samples/1st-violin-staccato-F#5-V127-XPZE.aif" name="90(F#5)-127" rootNote="90" loNote="90" hiNote="90" loVel="0" hiVel="127" start="195" end="41856"/>
+      <sample path="samples/1st-violin-staccato-G5-V127-IDIW.aif" name="91(G5)-127" rootNote="91" loNote="91" hiNote="91" loVel="0" hiVel="127" start="451" end="30592"/>
+      <sample path="samples/1st-violin-staccato-G#5-V127-DKU5.aif" name="92(G#5)-127" rootNote="92" loNote="92" hiNote="92" loVel="0" hiVel="127" start="575" end="28980"/>
+      <sample path="samples/1st-violin-staccato-A5-V127-AZ2V.aif" name="93(A5)-127" rootNote="93" loNote="93" hiNote="93" loVel="0" hiVel="127" start="537" end="41856"/>
+      <sample path="samples/1st-violin-staccato-A#5-V127-QI3E.aif" name="94(A#5)-127" rootNote="94" loNote="94" hiNote="94" loVel="0" hiVel="127" start="623" end="30703"/>
+      <sample path="samples/1st-violin-staccato-B5-V127-9G4U.aif" name="95(B5)-127" rootNote="95" loNote="95" hiNote="95" loVel="0" hiVel="127" start="536" end="28935"/>
+      <sample path="samples/1st-violin-staccato-C6-V127-S3N8.aif" name="96(C6)-127" rootNote="96" loNote="96" hiNote="96" loVel="0" hiVel="127" start="558" end="27321"/>
+      <sample path="samples/1st-violin-staccato-C#6-V127-6F1S.aif" name="97(C#6)-127" rootNote="97" loNote="97" hiNote="97" loVel="0" hiVel="127" start="360" end="25619"/>
+      <sample path="samples/1st-violin-staccato-D6-V127-X36G.aif" name="98(D6)-127" rootNote="98" loNote="98" hiNote="98" loVel="0" hiVel="127" start="263" end="24099"/>
+      <sample path="samples/1st-violin-staccato-D#6-V127-XWPA.aif" name="99(D#6)-127" rootNote="99" loNote="99" hiNote="99" loVel="0" hiVel="127" start="173" end="33024"/>
+      <sample path="samples/1st-violin-staccato-E6-V127-1ZZ3.aif" name="100(E6)-127" rootNote="100" loNote="100" hiNote="100" loVel="0" hiVel="127" start="191" end="21411"/>
+      <sample path="samples/1st-violin-staccato-F6-V127-PH0J.aif" name="101(F6)-127" rootNote="101" loNote="101" hiNote="101" loVel="0" hiVel="127" start="262" end="20259"/>
+      <sample path="samples/1st-violin-staccato-F#6-V127-VNQU.aif" name="102(F#6)-127" rootNote="102" loNote="102" hiNote="102" loVel="0" hiVel="127" start="460" end="19382"/>
+      <sample path="samples/1st-violin-staccato-G6-V127-WPH8.aif" name="103(G6)-127" rootNote="103" loNote="103" hiNote="103" loVel="0" hiVel="127" start="259" end="18069"/>
+      <sample path="samples/1st-violin-staccato-G#6-V127-CSWQ.aif" name="104(G#6)-127" rootNote="104" loNote="104" hiNote="104" loVel="0" hiVel="127" start="533" end="17360"/>
+      <sample path="samples/1st-violin-staccato-A6-V127-JUNZ.aif" name="105(A6)-127" rootNote="105" loNote="105" hiNote="105" loVel="0" hiVel="127" start="152" end="16088"/>
+      <effects/>
+    </group>
+    <group name="1st-violin-staccato RR:2" seqPosition="2" enabled="false">
+      <sample path="samples/1st-violin-staccato-G2-V127-SL0U.aif" name="55(G2)-127" rootNote="55" loNote="24" hiNote="55" loVel="1" hiVel="127" start="271" end="34432" seqPosition="2"/>
+      <sample path="samples/1st-violin-staccato-G#2-V127-FIDV.aif" name="56(G#2)-127" rootNote="56" loNote="56" hiNote="56" loVel="0" hiVel="127" start="167" end="41984" seqPosition="2"/>
+      <sample path="samples/1st-violin-staccato-A2-V127-JY2H.aif" name="57(A2)-127" rootNote="57" loNote="57" hiNote="57" loVel="0" hiVel="127" start="164" end="46208" seqPosition="2"/>
+      <sample path="samples/1st-violin-staccato-A#2-V127-OMCE.aif" name="58(A#2)-127" rootNote="58" loNote="58" hiNote="58" loVel="0" hiVel="127" start="84" end="34268" seqPosition="2"/>
+      <sample path="samples/1st-violin-staccato-B2-V127-2T1E.aif" name="59(B2)-127" rootNote="59" loNote="59" hiNote="59" loVel="0" hiVel="127" start="560" end="32920" seqPosition="2"/>
+      <sample path="samples/1st-violin-staccato-C3-V127-5F08.aif" name="60(C3)-127" rootNote="60" loNote="60" hiNote="60" loVel="0" hiVel="127" start="688" end="41856" seqPosition="2"/>
+      <sample path="samples/1st-violin-staccato-C#3-V127-5J5H.aif" name="61(C#3)-127" rootNote="61" loNote="61" hiNote="61" loVel="0" hiVel="127" start="564" end="30229" seqPosition="2"/>
+      <sample path="samples/1st-violin-staccato-D3-V127-175U.aif" name="62(D3)-127" rootNote="62" loNote="62" hiNote="62" loVel="0" hiVel="127" start="453" end="28282" seqPosition="2"/>
+      <sample path="samples/1st-violin-staccato-D#3-V127-32ZY.aif" name="63(D#3)-127" rootNote="63" loNote="63" hiNote="63" loVel="0" hiVel="127" start="533" end="35500" seqPosition="2"/>
+      <sample path="samples/1st-violin-staccato-E3-V127-RTJR.aif" name="64(E3)-127" rootNote="64" loNote="64" hiNote="64" loVel="0" hiVel="127" start="310" end="33198" seqPosition="2"/>
+      <sample path="samples/1st-violin-staccato-F3-V127-0U2K.aif" name="65(F3)-127" rootNote="65" loNote="65" hiNote="65" loVel="0" hiVel="127" start="614" end="41344" seqPosition="2"/>
+      <sample path="samples/1st-violin-staccato-F#3-V127-XKLE.aif" name="66(F#3)-127" rootNote="66" loNote="66" hiNote="66" loVel="0" hiVel="127" start="559" end="36644" seqPosition="2"/>
+      <sample path="samples/1st-violin-staccato-G3-V127-TNGG.aif" name="67(G3)-127" rootNote="67" loNote="67" hiNote="67" loVel="0" hiVel="127" start="431" end="44672" seqPosition="2"/>
+      <sample path="samples/1st-violin-staccato-G#3-V127-HNCP.aif" name="68(G#3)-127" rootNote="68" loNote="68" hiNote="68" loVel="0" hiVel="127" start="332" end="32556" seqPosition="2"/>
+      <sample path="samples/1st-violin-staccato-A3-V127-SYIL.aif" name="69(A3)-127" rootNote="69" loNote="69" hiNote="69" loVel="0" hiVel="127" start="529" end="40960" seqPosition="2"/>
+      <sample path="samples/1st-violin-staccato-A#3-V127-F2AY.aif" name="70(A#3)-127" rootNote="70" loNote="70" hiNote="70" loVel="0" hiVel="127" start="534" end="29168" seqPosition="2"/>
+      <sample path="samples/1st-violin-staccato-B3-V127-J5DM.aif" name="71(B3)-127" rootNote="71" loNote="71" hiNote="71" loVel="0" hiVel="127" start="230" end="27248" seqPosition="2"/>
+      <sample path="samples/1st-violin-staccato-C4-V127-4C9U.aif" name="72(C4)-127" rootNote="72" loNote="72" hiNote="72" loVel="0" hiVel="127" start="237" end="36868" seqPosition="2"/>
+      <sample path="samples/1st-violin-staccato-C#4-V127-7KCH.aif" name="73(C#4)-127" rootNote="73" loNote="73" hiNote="73" loVel="0" hiVel="127" start="461" end="44672" seqPosition="2"/>
+      <sample path="samples/1st-violin-staccato-D4-V127-H4LY.aif" name="74(D4)-127" rootNote="74" loNote="74" hiNote="74" loVel="0" hiVel="127" start="434" end="33100" seqPosition="2"/>
+      <sample path="samples/1st-violin-staccato-D#4-V127-Z9R0.aif" name="75(D#4)-127" rootNote="75" loNote="75" hiNote="75" loVel="0" hiVel="127" start="217" end="33892" seqPosition="2"/>
+      <sample path="samples/1st-violin-staccato-E4-V127-RESQ.aif" name="76(E4)-127" rootNote="76" loNote="76" hiNote="76" loVel="0" hiVel="127" start="186" end="41984" seqPosition="2"/>
+      <sample path="samples/1st-violin-staccato-F4-V127-P7R2.aif" name="77(F4)-127" rootNote="77" loNote="77" hiNote="77" loVel="0" hiVel="127" start="283" end="30264" seqPosition="2"/>
+      <sample path="samples/1st-violin-staccato-F#4-V127-XKQ3.aif" name="78(F#4)-127" rootNote="78" loNote="78" hiNote="78" loVel="0" hiVel="127" start="356" end="32268" seqPosition="2"/>
+      <sample path="samples/1st-violin-staccato-G4-V127-KJVT.aif" name="79(G4)-127" rootNote="79" loNote="79" hiNote="79" loVel="0" hiVel="127" start="168" end="30316" seqPosition="2"/>
+      <sample path="samples/1st-violin-staccato-G#4-V127-56KT.aif" name="80(G#4)-127" rootNote="80" loNote="80" hiNote="80" loVel="0" hiVel="127" start="128" end="28632" seqPosition="2"/>
+      <sample path="samples/1st-violin-staccato-A4-V127-25KQ.aif" name="81(A4)-127" rootNote="81" loNote="81" hiNote="81" loVel="0" hiVel="127" start="617" end="30928" seqPosition="2"/>
+      <sample path="samples/1st-violin-staccato-A#4-V127-U00Z.aif" name="82(A#4)-127" rootNote="82" loNote="82" hiNote="82" loVel="0" hiVel="127" start="417" end="29064" seqPosition="2"/>
+      <sample path="samples/1st-violin-staccato-B4-V127-8YMT.aif" name="83(B4)-127" rootNote="83" loNote="83" hiNote="83" loVel="0" hiVel="127" start="286" end="27348" seqPosition="2"/>
+      <sample path="samples/1st-violin-staccato-C5-V127-U3RB.aif" name="84(C5)-127" rootNote="84" loNote="84" hiNote="84" loVel="0" hiVel="127" start="688" end="34204" seqPosition="2"/>
+      <sample path="samples/1st-violin-staccato-C#5-V127-CQGH.aif" name="85(C#5)-127" rootNote="85" loNote="85" hiNote="85" loVel="0" hiVel="127" start="254" end="32048" seqPosition="2"/>
+      <sample path="samples/1st-violin-staccato-D5-V127-5IY4.aif" name="86(D5)-127" rootNote="86" loNote="86" hiNote="86" loVel="0" hiVel="127" start="207" end="39808" seqPosition="2"/>
+      <sample path="samples/1st-violin-staccato-D#5-V127-ZE1C.aif" name="87(D#5)-127" rootNote="87" loNote="87" hiNote="87" loVel="0" hiVel="127" start="70" end="36445" seqPosition="2"/>
+      <sample path="samples/1st-violin-staccato-E5-V127-3LE3.aif" name="88(E5)-127" rootNote="88" loNote="88" hiNote="88" loVel="0" hiVel="127" start="424" end="44544" seqPosition="2"/>
+      <sample path="samples/1st-violin-staccato-F5-V127-GWJN.aif" name="89(F5)-127" rootNote="89" loNote="89" hiNote="89" loVel="0" hiVel="127" start="627" end="33176" seqPosition="2"/>
+      <sample path="samples/1st-violin-staccato-F#5-V127-7FAM.aif" name="90(F#5)-127" rootNote="90" loNote="90" hiNote="90" loVel="0" hiVel="127" start="100" end="29404" seqPosition="2"/>
+      <sample path="samples/1st-violin-staccato-G5-V127-AQ5O.aif" name="91(G5)-127" rootNote="91" loNote="91" hiNote="91" loVel="0" hiVel="127" start="632" end="28360" seqPosition="2"/>
+      <sample path="samples/1st-violin-staccato-G#5-V127-5CHC.aif" name="92(G#5)-127" rootNote="92" loNote="92" hiNote="92" loVel="0" hiVel="127" start="148" end="26184" seqPosition="2"/>
+      <sample path="samples/1st-violin-staccato-A5-V127-C0VQ.aif" name="93(A5)-127" rootNote="93" loNote="93" hiNote="93" loVel="0" hiVel="127" start="555" end="30613" seqPosition="2"/>
+      <sample path="samples/1st-violin-staccato-A#5-V127-KWLL.aif" name="94(A#5)-127" rootNote="94" loNote="94" hiNote="94" loVel="0" hiVel="127" start="196" end="28407" seqPosition="2"/>
+      <sample path="samples/1st-violin-staccato-B5-V127-Q86L.aif" name="95(B5)-127" rootNote="95" loNote="95" hiNote="95" loVel="0" hiVel="127" start="190" end="36352" seqPosition="2"/>
+      <sample path="samples/1st-violin-staccato-C6-V127-TCF1.aif" name="96(C6)-127" rootNote="96" loNote="96" hiNote="96" loVel="0" hiVel="127" start="420" end="25570" seqPosition="2"/>
+      <sample path="samples/1st-violin-staccato-C#6-V127-SFU4.aif" name="97(C#6)-127" rootNote="97" loNote="97" hiNote="97" loVel="0" hiVel="127" start="178" end="23930" seqPosition="2"/>
+      <sample path="samples/1st-violin-staccato-D6-V127-24J8.aif" name="98(D6)-127" rootNote="98" loNote="98" hiNote="98" loVel="0" hiVel="127" start="401" end="22900" seqPosition="2"/>
+      <sample path="samples/1st-violin-staccato-D#6-V127-FYO3.aif" name="99(D#6)-127" rootNote="99" loNote="99" hiNote="99" loVel="0" hiVel="127" start="431" end="21612" seqPosition="2"/>
+      <sample path="samples/1st-violin-staccato-E6-V127-SGN0.aif" name="100(E6)-127" rootNote="100" loNote="100" hiNote="100" loVel="0" hiVel="127" start="510" end="20560" seqPosition="2"/>
+      <sample path="samples/1st-violin-staccato-F6-V127-Z005.aif" name="101(F6)-127" rootNote="101" loNote="101" hiNote="101" loVel="0" hiVel="127" start="288" end="19114" seqPosition="2"/>
+      <sample path="samples/1st-violin-staccato-F#6-V127-SQ3E.aif" name="102(F#6)-127" rootNote="102" loNote="102" hiNote="102" loVel="0" hiVel="127" start="579" end="18345" seqPosition="2"/>
+      <sample path="samples/1st-violin-staccato-G6-V127-ULRQ.aif" name="103(G6)-127" rootNote="103" loNote="103" hiNote="103" loVel="0" hiVel="127" start="365" end="17215" seqPosition="2"/>
+      <sample path="samples/1st-violin-staccato-G#6-V127-ZFE1.aif" name="104(G#6)-127" rootNote="104" loNote="104" hiNote="104" loVel="0" hiVel="127" start="460" end="16336" seqPosition="2"/>
+      <sample path="samples/1st-violin-staccato-A6-V127-0OTP.aif" name="105(A6)-127" rootNote="105" loNote="105" hiNote="105" loVel="0" hiVel="127" start="231" end="15205" seqPosition="2"/>
+      <effects/>
+    </group>
+    <group name="1st-violin-tremolo" enabled="false">
+      <sample path="samples/1st-violin-tremolo-G2-V127-2V3A.aif" name="55(G2)-127" rootNote="55" loNote="24" hiNote="55" loVel="1" hiVel="127" start="583" end="524800" loopEnabled="1" loopStart="172854" loopEnd="332702" loopCrossfade="2664" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-tremolo-G#2-V127-1A6S.aif" name="56(G#2)-127" rootNote="56" loNote="56" hiNote="56" loVel="0" hiVel="127" start="371" end="524672" loopEnabled="1" loopStart="149808" loopEnd="375878" loopCrossfade="3113" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-tremolo-A2-V127-WO4E.aif" name="57(A2)-127" rootNote="57" loNote="57" hiNote="57" loVel="0" hiVel="127" start="115" end="525440" loopEnabled="1" loopStart="220799" loopEnd="402954" loopCrossfade="3034" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-tremolo-A#2-V127-OO23.aif" name="58(A#2)-127" rootNote="58" loNote="58" hiNote="58" loVel="0" hiVel="127" start="43" end="526208" loopEnabled="1" loopStart="146297" loopEnd="402046" loopCrossfade="3046" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-tremolo-B2-V127-HQGU.aif" name="59(B2)-127" rootNote="59" loNote="59" hiNote="59" loVel="0" hiVel="127" start="467" end="524544" loopEnabled="1" loopStart="217896" loopEnd="298339" loopCrossfade="1340" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-tremolo-C3-V127-YMGX.aif" name="60(C3)-127" rootNote="60" loNote="60" hiNote="60" loVel="0" hiVel="127" start="303" end="526208" loopEnabled="1" loopStart="159896" loopEnd="233324" loopCrossfade="1201" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-tremolo-C#3-V127-8FXO.aif" name="61(C#3)-127" rootNote="61" loNote="61" hiNote="61" loVel="0" hiVel="127" start="131" end="525696" loopEnabled="1" loopStart="111421" loopEnd="392309" loopCrossfade="2318" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-tremolo-D3-V127-7TP6.aif" name="62(D3)-127" rootNote="62" loNote="62" hiNote="62" loVel="0" hiVel="127" start="199" end="526336" loopEnabled="1" loopStart="97267" loopEnd="162488" loopCrossfade="1087" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-tremolo-D#3-V127-C3JK.aif" name="63(D#3)-127" rootNote="63" loNote="63" hiNote="63" loVel="0" hiVel="127" start="327" end="525824" loopEnabled="1" loopStart="160211" loopEnd="250975" loopCrossfade="1385" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-tremolo-E3-V127-7FGP.aif" name="64(E3)-127" rootNote="64" loNote="64" hiNote="64" loVel="0" hiVel="127" start="383" end="525568" loopEnabled="1" loopStart="232860" loopEnd="405937" loopCrossfade="2884" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-tremolo-F3-V127-INHC.aif" name="65(F3)-127" rootNote="65" loNote="65" hiNote="65" loVel="0" hiVel="127" start="351" end="525696" loopEnabled="1" loopStart="220574" loopEnd="404811" loopCrossfade="2733" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-tremolo-F#3-V127-8CN0.aif" name="66(F#3)-127" rootNote="66" loNote="66" hiNote="66" loVel="0" hiVel="127" start="183" end="522759" loopEnabled="1" loopStart="109368" loopEnd="177338" loopCrossfade="1089" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-tremolo-G3-V127-IMFD.aif" name="67(G3)-127" rootNote="67" loNote="67" hiNote="67" loVel="0" hiVel="127" start="323" end="524932" loopEnabled="1" loopStart="298822" loopEnd="373941" loopCrossfade="1115" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-tremolo-G#3-V127-2JHV.aif" name="68(G#3)-127" rootNote="68" loNote="68" hiNote="68" loVel="0" hiVel="127" start="159" end="523776" loopEnabled="1" loopStart="159084" loopEnd="238043" loopCrossfade="1170" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-tremolo-A3-V127-1YK9.aif" name="69(A3)-127" rootNote="69" loNote="69" hiNote="69" loVel="0" hiVel="127" start="91" end="523392" loopEnabled="1" loopStart="108412" loopEnd="315893" loopCrossfade="2256" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-tremolo-A#3-V127-TVJN.aif" name="70(A#3)-127" rootNote="70" loNote="70" hiNote="70" loVel="0" hiVel="127" start="83" end="525568" loopEnabled="1" loopStart="279529" loopEnd="377706" loopCrossfade="1636" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-tremolo-B3-V127-JV0S.aif" name="71(B3)-127" rootNote="71" loNote="71" hiNote="71" loVel="0" hiVel="127" start="259" end="525312" loopEnabled="1" loopStart="313295" loopEnd="406045" loopCrossfade="1545" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-tremolo-C4-V127-I0JS.aif" name="72(C4)-127" rootNote="72" loNote="72" hiNote="72" loVel="0" hiVel="127" start="327" end="525442" loopEnabled="1" loopStart="309926" loopEnd="402208" loopCrossfade="1528" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-tremolo-C#4-V127-26I4.aif" name="73(C#4)-127" rootNote="73" loNote="73" hiNote="73" loVel="0" hiVel="127" start="199" end="523264" loopEnabled="1" loopStart="220610" loopEnd="307770" loopCrossfade="1451" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-tremolo-D4-V127-CJI0.aif" name="74(D4)-127" rootNote="74" loNote="74" hiNote="74" loVel="0" hiVel="127" start="219" end="524547" loopEnabled="1" loopStart="145750" loopEnd="392247" loopCrossfade="3031" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-tremolo-D#4-V127-2XTI.aif" name="75(D#4)-127" rootNote="75" loNote="75" hiNote="75" loVel="0" hiVel="127" start="323" end="523392" loopEnabled="1" loopStart="227050" loopEnd="402359" loopCrossfade="2921" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-tremolo-E4-V127-67NM.aif" name="76(E4)-127" rootNote="76" loNote="76" hiNote="76" loVel="0" hiVel="127" start="292" end="525568" loopEnabled="1" loopStart="150929" loopEnd="398949" loopCrossfade="3138" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-tremolo-F4-V127-NXG5.aif" name="77(F4)-127" rootNote="77" loNote="77" hiNote="77" loVel="0" hiVel="127" start="400" end="525578" loopEnabled="1" loopStart="237828" loopEnd="315770" loopCrossfade="1299" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-tremolo-F#4-V127-XXNZ.aif" name="78(F#4)-127" rootNote="78" loNote="78" hiNote="78" loVel="0" hiVel="127" start="511" end="524678" loopEnabled="1" loopStart="172096" loopEnd="324913" loopCrossfade="2546" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-tremolo-G4-V127-LX4M.aif" name="79(G4)-127" rootNote="79" loNote="79" hiNote="79" loVel="0" hiVel="127" start="567" end="525056" loopEnabled="1" loopStart="153836" loopEnd="298150" loopCrossfade="2404" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-tremolo-G#4-V127-6EKI.aif" name="80(G#4)-127" rootNote="80" loNote="80" hiNote="80" loVel="0" hiVel="127" start="215" end="525312" loopEnabled="1" loopStart="253864" loopEnd="321953" loopCrossfade="1132" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-tremolo-A4-V127-OSOA.aif" name="81(A4)-127" rootNote="81" loNote="81" hiNote="81" loVel="0" hiVel="127" start="163" end="525700" loopEnabled="1" loopStart="251246" loopEnd="391419" loopCrossfade="2142" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-tremolo-A#4-V127-3EED.aif" name="82(A#4)-127" rootNote="82" loNote="82" hiNote="82" loVel="0" hiVel="127" start="183" end="524931" loopEnabled="1" loopStart="189688" loopEnd="370498" loopCrossfade="2887" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-tremolo-B4-V127-PUYV.aif" name="83(B4)-127" rootNote="83" loNote="83" hiNote="83" loVel="0" hiVel="127" start="307" end="524928" loopEnabled="1" loopStart="136489" loopEnd="299736" loopCrossfade="2720" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-tremolo-C5-V127-XN1F.aif" name="84(C5)-127" rootNote="84" loNote="84" hiNote="84" loVel="0" hiVel="127" start="419" end="525312" loopEnabled="1" loopStart="209808" loopEnd="286727" loopCrossfade="1279" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-tremolo-C#5-V127-Z65U.aif" name="85(C#5)-127" rootNote="85" loNote="85" hiNote="85" loVel="0" hiVel="127" start="603" end="526080" loopEnabled="1" loopStart="315010" loopEnd="387845" loopCrossfade="1213" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-tremolo-D5-V127-VBPV.aif" name="86(D5)-127" rootNote="86" loNote="86" hiNote="86" loVel="0" hiVel="127" start="99" end="526592" loopEnabled="1" loopStart="213252" loopEnd="281896" loopCrossfade="1144" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-tremolo-D#5-V127-VKK1.aif" name="87(D#5)-127" rootNote="87" loNote="87" hiNote="87" loVel="0" hiVel="127" start="371" end="525696" loopEnabled="1" loopStart="236965" loopEnd="365747" loopCrossfade="2146" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-tremolo-E5-V127-A0GW.aif" name="88(E5)-127" rootNote="88" loNote="88" hiNote="88" loVel="0" hiVel="127" start="275" end="524288" loopEnabled="1" loopStart="195698" loopEnd="317928" loopCrossfade="2037" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-tremolo-F5-V127-2S1D.aif" name="89(F5)-127" rootNote="89" loNote="89" hiNote="89" loVel="0" hiVel="127" start="383" end="524032" loopEnabled="1" loopStart="154064" loopEnd="268997" loopCrossfade="1915" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-tremolo-F#5-V127-JZPI.aif" name="90(F#5)-127" rootNote="90" loNote="90" hiNote="90" loVel="0" hiVel="127" start="63" end="524673" loopEnabled="1" loopStart="90979" loopEnd="308774" loopCrossfade="1894" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-tremolo-G5-V127-04H7.aif" name="91(G5)-127" rootNote="91" loNote="91" hiNote="91" loVel="0" hiVel="127" start="219" end="525184" loopEnabled="1" loopStart="85601" loopEnd="188029" loopCrossfade="1707" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-tremolo-G#5-V127-X1DY.aif" name="92(G#5)-127" rootNote="92" loNote="92" hiNote="92" loVel="0" hiVel="127" start="439" end="526592" loopEnabled="1" loopStart="225483" loopEnd="370082" loopCrossfade="2406" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-tremolo-A5-V127-X7UX.aif" name="93(A5)-127" rootNote="93" loNote="93" hiNote="93" loVel="0" hiVel="127" start="367" end="526592" loopEnabled="1" loopStart="211370" loopEnd="348509" loopCrossfade="2275" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-tremolo-A#5-V127-S81J.aif" name="94(A#5)-127" rootNote="94" loNote="94" hiNote="94" loVel="0" hiVel="127" start="323" end="527104" loopEnabled="1" loopStart="160690" loopEnd="246870" loopCrossfade="1436" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-tremolo-B5-V127-H6ON.aif" name="95(B5)-127" rootNote="95" loNote="95" hiNote="95" loVel="0" hiVel="127" start="551" end="529408" loopEnabled="1" loopStart="233212" loopEnd="396081" loopCrossfade="2714" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-tremolo-C6-V127-247O.aif" name="96(C6)-127" rootNote="96" loNote="96" hiNote="96" loVel="0" hiVel="127" start="175" end="526208" loopEnabled="1" loopStart="93978" loopEnd="323910" loopCrossfade="1954" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-tremolo-C#6-V127-IC51.aif" name="97(C#6)-127" rootNote="97" loNote="97" hiNote="97" loVel="0" hiVel="127" start="283" end="526592" loopEnabled="1" loopStart="171170" loopEnd="388512" loopCrossfade="3560" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-tremolo-D6-V127-VKM7.aif" name="98(D6)-127" rootNote="98" loNote="98" hiNote="98" loVel="0" hiVel="127" start="343" end="525312" loopEnabled="1" loopStart="290046" loopEnd="358694" loopCrossfade="1144" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-tremolo-D#6-V127-01GL.aif" name="99(D#6)-127" rootNote="99" loNote="99" hiNote="99" loVel="0" hiVel="127" start="199" end="526976" loopEnabled="1" loopStart="249704" loopEnd="378851" loopCrossfade="2152" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-tremolo-E6-V127-CWJ3.aif" name="100(E6)-127" rootNote="100" loNote="100" hiNote="100" loVel="0" hiVel="127" start="639" end="526597" loopEnabled="1" loopStart="264343" loopEnd="386195" loopCrossfade="2030" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-tremolo-F6-V127-BC8Q.aif" name="101(F6)-127" rootNote="101" loNote="101" hiNote="101" loVel="0" hiVel="127" start="435" end="525184" loopEnabled="1" loopStart="248967" loopEnd="393304" loopCrossfade="2405" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-tremolo-F#6-V127-FPU0.aif" name="102(F#6)-127" rootNote="102" loNote="102" hiNote="102" loVel="0" hiVel="127" start="103" end="525824" loopEnabled="1" loopStart="85474" loopEnd="330060" loopCrossfade="1778" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-tremolo-G6-V127-URZJ.aif" name="103(G6)-127" rootNote="103" loNote="103" hiNote="103" loVel="0" hiVel="127" start="191" end="525057" loopEnabled="1" loopStart="95220" loopEnd="274469" loopCrossfade="1979" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-tremolo-G#6-V127-VVNE.aif" name="104(G#6)-127" rootNote="104" loNote="104" hiNote="104" loVel="0" hiVel="127" start="191" end="527872" loopEnabled="1" loopStart="138629" loopEnd="211357" loopCrossfade="1212" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-tremolo-A6-V127-FYLH.aif" name="105(A6)-127" rootNote="105" loNote="105" hiNote="105" loVel="0" hiVel="127" start="535" end="526848" loopEnabled="1" loopStart="129555" loopEnd="220752" loopCrossfade="1519" loopCrossfadeMode="equal_power"/>
+      <effects/>
+    </group>
+    <group name="1st-violin-pizzicato" enabled="false">
+      <sample path="samples/1st-violin-pizzicato-G2-V127-TGA2.aif" name="55(G2)-127" rootNote="55" loNote="24" hiNote="55" loVel="1" hiVel="127" start="208" end="29564"/>
+      <sample path="samples/1st-violin-pizzicato-G#2-V127-J0XN.aif" name="56(G#2)-127" rootNote="56" loNote="56" hiNote="56" loVel="0" hiVel="127" start="616" end="28224"/>
+      <sample path="samples/1st-violin-pizzicato-A2-V127-HP6T.aif" name="57(A2)-127" rootNote="57" loNote="57" hiNote="57" loVel="0" hiVel="127" start="244" end="31360"/>
+      <sample path="samples/1st-violin-pizzicato-A#2-V127-XCM2.aif" name="58(A#2)-127" rootNote="58" loNote="58" hiNote="58" loVel="0" hiVel="127" start="532" end="29928"/>
+      <sample path="samples/1st-violin-pizzicato-B2-V127-5GAA.aif" name="59(B2)-127" rootNote="59" loNote="59" hiNote="59" loVel="0" hiVel="127" start="664" end="28324"/>
+      <sample path="samples/1st-violin-pizzicato-C3-V127-GD8H.aif" name="60(C3)-127" rootNote="60" loNote="60" hiNote="60" loVel="0" hiVel="127" start="672" end="31381"/>
+      <sample path="samples/1st-violin-pizzicato-C#3-V127-PBB9.aif" name="61(C#3)-127" rootNote="61" loNote="61" hiNote="61" loVel="0" hiVel="127" start="344" end="29311"/>
+      <sample path="samples/1st-violin-pizzicato-D3-V127-ISQ8.aif" name="62(D3)-127" rootNote="62" loNote="62" hiNote="62" loVel="0" hiVel="127" start="164" end="37504"/>
+      <sample path="samples/1st-violin-pizzicato-D#3-V127-29EC.aif" name="63(D#3)-127" rootNote="63" loNote="63" hiNote="63" loVel="0" hiVel="127" start="192" end="40576"/>
+      <sample path="samples/1st-violin-pizzicato-E3-V127-BDIK.aif" name="64(E3)-127" rootNote="64" loNote="64" hiNote="64" loVel="0" hiVel="127" start="308" end="29307"/>
+      <sample path="samples/1st-violin-pizzicato-F3-V127-TYPI.aif" name="65(F3)-127" rootNote="65" loNote="65" hiNote="65" loVel="0" hiVel="127" start="332" end="27714"/>
+      <sample path="samples/1st-violin-pizzicato-F#3-V127-WJZO.aif" name="66(F#3)-127" rootNote="66" loNote="66" hiNote="66" loVel="0" hiVel="127" start="272" end="31138"/>
+      <sample path="samples/1st-violin-pizzicato-G3-V127-BN0J.aif" name="67(G3)-127" rootNote="67" loNote="67" hiNote="67" loVel="0" hiVel="127" start="168" end="29259"/>
+      <sample path="samples/1st-violin-pizzicato-G#3-V127-YTV5.aif" name="68(G#3)-127" rootNote="68" loNote="68" hiNote="68" loVel="0" hiVel="127" start="200" end="37120"/>
+      <sample path="samples/1st-violin-pizzicato-A3-V127-8RDL.aif" name="69(A3)-127" rootNote="69" loNote="69" hiNote="69" loVel="0" hiVel="127" start="300" end="31149"/>
+      <sample path="samples/1st-violin-pizzicato-A#3-V127-4RVJ.aif" name="70(A#3)-127" rootNote="70" loNote="70" hiNote="70" loVel="0" hiVel="127" start="252" end="29256"/>
+      <sample path="samples/1st-violin-pizzicato-B3-V127-LV0V.aif" name="71(B3)-127" rootNote="71" loNote="71" hiNote="71" loVel="0" hiVel="127" start="136" end="27486"/>
+      <sample path="samples/1st-violin-pizzicato-C4-V127-0C7I.aif" name="72(C4)-127" rootNote="72" loNote="72" hiNote="72" loVel="0" hiVel="127" start="236" end="30991"/>
+      <sample path="samples/1st-violin-pizzicato-C#4-V127-TTFD.aif" name="73(C#4)-127" rootNote="73" loNote="73" hiNote="73" loVel="0" hiVel="127" start="280" end="29288"/>
+      <sample path="samples/1st-violin-pizzicato-D4-V127-A5IT.aif" name="74(D4)-127" rootNote="74" loNote="74" hiNote="74" loVel="0" hiVel="127" start="228" end="27772"/>
+      <sample path="samples/1st-violin-pizzicato-D#4-V127-KYVN.aif" name="75(D#4)-127" rootNote="75" loNote="75" hiNote="75" loVel="0" hiVel="127" start="152" end="30935"/>
+      <sample path="samples/1st-violin-pizzicato-E4-V127-L55H.aif" name="76(E4)-127" rootNote="76" loNote="76" hiNote="76" loVel="0" hiVel="127" start="204" end="29307"/>
+      <sample path="samples/1st-violin-pizzicato-F4-V127-3OQZ.aif" name="77(F4)-127" rootNote="77" loNote="77" hiNote="77" loVel="0" hiVel="127" start="260" end="37248"/>
+      <sample path="samples/1st-violin-pizzicato-F#4-V127-3SHL.aif" name="78(F#4)-127" rootNote="78" loNote="78" hiNote="78" loVel="0" hiVel="127" start="368" end="40832"/>
+      <sample path="samples/1st-violin-pizzicato-G4-V127-EJU0.aif" name="79(G4)-127" rootNote="79" loNote="79" hiNote="79" loVel="0" hiVel="127" start="144" end="29236"/>
+      <sample path="samples/1st-violin-pizzicato-G#4-V127-0WTV.aif" name="80(G#4)-127" rootNote="80" loNote="80" hiNote="80" loVel="0" hiVel="127" start="268" end="27711"/>
+      <sample path="samples/1st-violin-pizzicato-A4-V127-Y68Z.aif" name="81(A4)-127" rootNote="81" loNote="81" hiNote="81" loVel="0" hiVel="127" start="480" end="31380"/>
+      <sample path="samples/1st-violin-pizzicato-A#4-V127-0OLK.aif" name="82(A#4)-127" rootNote="82" loNote="82" hiNote="82" loVel="0" hiVel="127" start="588" end="29712"/>
+      <sample path="samples/1st-violin-pizzicato-B4-V127-H6H5.aif" name="83(B4)-127" rootNote="83" loNote="83" hiNote="83" loVel="0" hiVel="127" start="464" end="27903"/>
+      <sample path="samples/1st-violin-pizzicato-C5-V127-WHVP.aif" name="84(C5)-127" rootNote="84" loNote="84" hiNote="84" loVel="0" hiVel="127" start="216" end="31154"/>
+      <sample path="samples/1st-violin-pizzicato-C#5-V127-9HCU.aif" name="85(C#5)-127" rootNote="85" loNote="85" hiNote="85" loVel="0" hiVel="127" start="396" end="29485"/>
+      <sample path="samples/1st-violin-pizzicato-D5-V127-1UZ4.aif" name="86(D5)-127" rootNote="86" loNote="86" hiNote="86" loVel="0" hiVel="127" start="488" end="27942"/>
+      <sample path="samples/1st-violin-pizzicato-D#5-V127-MRP4.aif" name="87(D#5)-127" rootNote="87" loNote="87" hiNote="87" loVel="0" hiVel="127" start="312" end="31167"/>
+      <sample path="samples/1st-violin-pizzicato-E5-V127-N9N7.aif" name="88(E5)-127" rootNote="88" loNote="88" hiNote="88" loVel="0" hiVel="127" start="148" end="29181"/>
+      <sample path="samples/1st-violin-pizzicato-F5-V127-CGWZ.aif" name="89(F5)-127" rootNote="89" loNote="89" hiNote="89" loVel="0" hiVel="127" start="432" end="27895"/>
+      <sample path="samples/1st-violin-pizzicato-F#5-V127-RUDF.aif" name="90(F#5)-127" rootNote="90" loNote="90" hiNote="90" loVel="0" hiVel="127" start="420" end="31203"/>
+      <sample path="samples/1st-violin-pizzicato-G5-V127-D8P3.aif" name="91(G5)-127" rootNote="91" loNote="91" hiNote="91" loVel="0" hiVel="127" start="232" end="29258"/>
+      <sample path="samples/1st-violin-pizzicato-G#5-V127-K0DG.aif" name="92(G#5)-127" rootNote="92" loNote="92" hiNote="92" loVel="0" hiVel="127" start="292" end="27766"/>
+      <sample path="samples/1st-violin-pizzicato-A5-V127-9DVX.aif" name="93(A5)-127" rootNote="93" loNote="93" hiNote="93" loVel="0" hiVel="127" start="176" end="31054"/>
+      <sample path="samples/1st-violin-pizzicato-A#5-V127-E1OK.aif" name="94(A#5)-127" rootNote="94" loNote="94" hiNote="94" loVel="0" hiVel="127" start="252" end="29319"/>
+      <sample path="samples/1st-violin-pizzicato-B5-V127-A09Q.aif" name="95(B5)-127" rootNote="95" loNote="95" hiNote="95" loVel="0" hiVel="127" start="516" end="27853"/>
+      <sample path="samples/1st-violin-pizzicato-C6-V127-6B5H.aif" name="96(C6)-127" rootNote="96" loNote="96" hiNote="96" loVel="0" hiVel="127" start="544" end="26499"/>
+      <sample path="samples/1st-violin-pizzicato-C#6-V127-I4X3.aif" name="97(C#6)-127" rootNote="97" loNote="97" hiNote="97" loVel="0" hiVel="127" start="404" end="24768"/>
+      <sample path="samples/1st-violin-pizzicato-D6-V127-1RY0.aif" name="98(D6)-127" rootNote="98" loNote="98" hiNote="98" loVel="0" hiVel="127" start="560" end="33280"/>
+      <sample path="samples/1st-violin-pizzicato-D#6-V127-05EJ.aif" name="99(D#6)-127" rootNote="99" loNote="99" hiNote="99" loVel="0" hiVel="127" start="204" end="22006"/>
+      <sample path="samples/1st-violin-pizzicato-E6-V127-ICU0.aif" name="100(E6)-127" rootNote="100" loNote="100" hiNote="100" loVel="0" hiVel="127" start="264" end="20832"/>
+      <sample path="samples/1st-violin-pizzicato-F6-V127-73PZ.aif" name="101(F6)-127" rootNote="101" loNote="101" hiNote="101" loVel="0" hiVel="127" start="444" end="19765"/>
+      <sample path="samples/1st-violin-pizzicato-F#6-V127-021P.aif" name="102(F#6)-127" rootNote="102" loNote="102" hiNote="102" loVel="0" hiVel="127" start="640" end="18878"/>
+      <sample path="samples/1st-violin-pizzicato-G6-V127-AFF0.aif" name="103(G6)-127" rootNote="103" loNote="103" hiNote="103" loVel="0" hiVel="127" start="212" end="17450"/>
+      <sample path="samples/1st-violin-pizzicato-G#6-V127-VA08.aif" name="104(G#6)-127" rootNote="104" loNote="104" hiNote="104" loVel="0" hiVel="127" start="496" end="16768"/>
+      <sample path="samples/1st-violin-pizzicato-A6-V127-36WM.aif" name="105(A6)-127" rootNote="105" loNote="105" hiNote="105" loVel="0" hiVel="127" start="700" end="16067"/>
+      <effects/>
+    </group>
+    <group name="1st-violin-sus-accent" enabled="false">
+      <sample path="samples/1st-violin-sus-accent-G2-V127-4A3P.aif" name="55(G2)-127" rootNote="55" loNote="24" hiNote="55" loVel="1" hiVel="127" start="15" end="518912" loopEnabled="1" loopStart="146346" loopEnd="252690" loopCrossfade="1772" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-accent-G#2-V127-TC58.aif" name="56(G#2)-127" rootNote="56" loNote="56" hiNote="56" loVel="0" hiVel="127" start="87" end="519552" loopEnabled="1" loopStart="137760" loopEnd="337341" loopCrossfade="2868" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-accent-A2-V127-4KOH.aif" name="57(A2)-127" rootNote="57" loNote="57" hiNote="57" loVel="0" hiVel="127" start="40" end="519296" loopEnabled="1" loopStart="262251" loopEnd="375111" loopCrossfade="1881" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-accent-A#2-V127-HVTF.aif" name="58(A#2)-127" rootNote="58" loNote="58" hiNote="58" loVel="0" hiVel="127" start="168" end="519424" loopEnabled="1" loopStart="141612" loopEnd="248538" loopCrossfade="1775" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-accent-B2-V127-XIEA.aif" name="59(B2)-127" rootNote="59" loNote="59" hiNote="59" loVel="0" hiVel="127" start="120" end="518400" loopEnabled="1" loopStart="134567" loopEnd="285869" loopCrossfade="2800" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-accent-C3-V127-WJCT.aif" name="60(C3)-127" rootNote="60" loNote="60" hiNote="60" loVel="0" hiVel="127" start="172" end="520192" loopEnabled="1" loopStart="247016" loopEnd="345511" loopCrossfade="1641" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-accent-C#3-V127-SILS.aif" name="61(C#3)-127" rootNote="61" loNote="61" hiNote="61" loVel="0" hiVel="127" start="112" end="521101" loopEnabled="1" loopStart="234040" loopEnd="327193" loopCrossfade="1552" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-accent-D3-V127-5Q5T.aif" name="62(D3)-127" rootNote="62" loNote="62" hiNote="62" loVel="0" hiVel="127" start="120" end="517888" loopEnabled="1" loopStart="309127" loopEnd="397005" loopCrossfade="1464" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-accent-D#3-V127-EUP3.aif" name="63(D#3)-127" rootNote="63" loNote="63" hiNote="63" loVel="0" hiVel="127" start="141" end="520448" loopEnabled="1" loopStart="142762" loopEnd="299723" loopCrossfade="2546" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-accent-E3-V127-WR72.aif" name="64(E3)-127" rootNote="64" loNote="64" hiNote="64" loVel="0" hiVel="127" start="138" end="518784" loopEnabled="1" loopStart="201143" loopEnd="345512" loopCrossfade="2406" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-accent-F3-V127-NJN1.aif" name="65(F3)-127" rootNote="65" loNote="65" hiNote="65" loVel="0" hiVel="127" start="138" end="519429" loopEnabled="1" loopStart="128050" loopEnd="346578" loopCrossfade="2664" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-accent-F#3-V127-FOYO.aif" name="66(F#3)-127" rootNote="66" loNote="66" hiNote="66" loVel="0" hiVel="127" start="15" end="517505" loopEnabled="1" loopStart="247987" loopEnd="366683" loopCrossfade="1978" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-accent-G3-V127-NDHZ.aif" name="67(G3)-127" rootNote="67" loNote="67" hiNote="67" loVel="0" hiVel="127" start="103" end="520192" loopEnabled="1" loopStart="154858" loopEnd="379334" loopCrossfade="3224" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-accent-G#3-V127-D160.aif" name="68(G#3)-127" rootNote="68" loNote="68" hiNote="68" loVel="0" hiVel="127" start="67" end="518912" loopEnabled="1" loopStart="252004" loopEnd="357772" loopCrossfade="1762" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-accent-A3-V127-50V0.aif" name="69(A3)-127" rootNote="69" loNote="69" hiNote="69" loVel="0" hiVel="127" start="177" end="518144" loopEnabled="1" loopStart="167170" loopEnd="371129" loopCrossfade="3399" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-accent-A#3-V127-YGDF.aif" name="70(A#3)-127" rootNote="70" loNote="70" hiNote="70" loVel="0" hiVel="127" start="137" end="518017" loopEnabled="1" loopStart="204893" loopEnd="398218" loopCrossfade="3222" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-accent-B3-V127-HPB8.aif" name="71(B3)-127" rootNote="71" loNote="71" hiNote="71" loVel="0" hiVel="127" start="127" end="518656" loopEnabled="1" loopStart="284911" loopEnd="376048" loopCrossfade="1518" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-accent-C4-V127-8CKE.aif" name="72(C4)-127" rootNote="72" loNote="72" hiNote="72" loVel="0" hiVel="127" start="73" end="519169" loopEnabled="1" loopStart="248727" loopEnd="376880" loopCrossfade="2135" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-accent-C#4-V127-O1J8.aif" name="73(C#4)-127" rootNote="73" loNote="73" hiNote="73" loVel="0" hiVel="127" start="149" end="519936" loopEnabled="1" loopStart="131649" loopEnd="372425" loopCrossfade="2739" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-accent-D4-V127-2KSO.aif" name="74(D4)-127" rootNote="74" loNote="74" hiNote="74" loVel="0" hiVel="127" start="143" end="519043" loopEnabled="1" loopStart="174100" loopEnd="402287" loopCrossfade="3624" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-accent-D#4-V127-QAVU.aif" name="75(D#4)-127" rootNote="75" loNote="75" hiNote="75" loVel="0" hiVel="127" start="104" end="516992" loopEnabled="1" loopStart="154879" loopEnd="323510" loopCrossfade="2809" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-accent-E4-V127-I1AH.aif" name="76(E4)-127" rootNote="76" loNote="76" hiNote="76" loVel="0" hiVel="127" start="183" end="517892" loopEnabled="1" loopStart="244887" loopEnd="404026" loopCrossfade="2652" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-accent-F4-V127-P9C9.aif" name="77(F4)-127" rootNote="77" loNote="77" hiNote="77" loVel="0" hiVel="127" start="62" end="518913" loopEnabled="1" loopStart="230167" loopEnd="379381" loopCrossfade="2486" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-accent-F#4-V127-KFGV.aif" name="78(F#4)-127" rootNote="78" loNote="78" hiNote="78" loVel="0" hiVel="127" start="84" end="519808" loopEnabled="1" loopStart="151435" loopEnd="369025" loopCrossfade="3153" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-accent-G4-V127-CHR4.aif" name="79(G4)-127" rootNote="79" loNote="79" hiNote="79" loVel="0" hiVel="127" start="107" end="519298" loopEnabled="1" loopStart="287595" loopEnd="403019" loopCrossfade="1923" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-accent-G#4-V127-IIFL.aif" name="80(G#4)-127" rootNote="80" loNote="80" hiNote="80" loVel="0" hiVel="127" start="80" end="520069" loopEnabled="1" loopStart="215812" loopEnd="324673" loopCrossfade="1814" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-accent-A4-V127-FOWE.aif" name="81(A4)-127" rootNote="81" loNote="81" hiNote="81" loVel="0" hiVel="127" start="184" end="519168" loopEnabled="1" loopStart="263698" loopEnd="349685" loopCrossfade="1433" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-accent-A#4-V127-AIJS.aif" name="82(A#4)-127" rootNote="82" loNote="82" hiNote="82" loVel="0" hiVel="127" start="125" end="519552" loopEnabled="1" loopStart="248229" loopEnd="328987" loopCrossfade="1345" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-accent-B4-V127-YZWW.aif" name="83(B4)-127" rootNote="83" loNote="83" hiNote="83" loVel="0" hiVel="127" start="170" end="519936" loopEnabled="1" loopStart="159000" loopEnd="388184" loopCrossfade="3308" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-accent-C5-V127-8GTV.aif" name="84(C5)-127" rootNote="84" loNote="84" hiNote="84" loVel="0" hiVel="127" start="136" end="519552" loopEnabled="1" loopStart="163176" loopEnd="378454" loopCrossfade="3396" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-accent-C#5-V127-25J8.aif" name="85(C#5)-127" rootNote="85" loNote="85" hiNote="85" loVel="0" hiVel="127" start="83" end="518915" loopEnabled="1" loopStart="230351" loopEnd="340030" loopCrossfade="1827" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-accent-D5-V127-QLR3.aif" name="86(D5)-127" rootNote="86" loNote="86" hiNote="86" loVel="0" hiVel="127" start="179" end="520454" loopEnabled="1" loopStart="182243" loopEnd="389814" loopCrossfade="3459" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-accent-D#5-V127-H9JF.aif" name="87(D#5)-127" rootNote="87" loNote="87" hiNote="87" loVel="0" hiVel="127" start="147" end="518400" loopEnabled="1" loopStart="198719" loopEnd="287688" loopCrossfade="1482" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-accent-E5-V127-4TT6.aif" name="88(E5)-127" rootNote="88" loNote="88" hiNote="88" loVel="0" hiVel="127" start="104" end="518657" loopEnabled="1" loopStart="213061" loopEnd="381832" loopCrossfade="2812" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-accent-F5-V127-V5OI.aif" name="89(F5)-127" rootNote="89" loNote="89" hiNote="89" loVel="0" hiVel="127" start="134" end="519424" loopEnabled="1" loopStart="284822" loopEnd="364498" loopCrossfade="1327" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-accent-F#5-V127-76G7.aif" name="90(F#5)-127" rootNote="90" loNote="90" hiNote="90" loVel="0" hiVel="127" start="88" end="518912" loopEnabled="1" loopStart="248644" loopEnd="347893" loopCrossfade="1654" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-accent-G5-V127-0X6S.aif" name="91(G5)-127" rootNote="91" loNote="91" hiNote="91" loVel="0" hiVel="127" start="131" end="518272" loopEnabled="1" loopStart="141494" loopEnd="348291" loopCrossfade="2945" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-accent-G#5-V127-02DI.aif" name="92(G#5)-127" rootNote="92" loNote="92" hiNote="92" loVel="0" hiVel="127" start="100" end="519040" loopEnabled="1" loopStart="133951" loopEnd="384271" loopCrossfade="2788" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-accent-A5-V127-X731.aif" name="93(A5)-127" rootNote="93" loNote="93" hiNote="93" loVel="0" hiVel="127" start="89" end="518144" loopEnabled="1" loopStart="202196" loopEnd="353401" loopCrossfade="2519" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-accent-A#5-V127-JZYW.aif" name="94(A#5)-127" rootNote="94" loNote="94" hiNote="94" loVel="0" hiVel="127" start="156" end="518656" loopEnabled="1" loopStart="190843" loopEnd="333069" loopCrossfade="2370" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-accent-B5-V127-N43H.aif" name="95(B5)-127" rootNote="95" loNote="95" hiNote="95" loVel="0" hiVel="127" start="60" end="517763" loopEnabled="1" loopStart="135706" loopEnd="405287" loopCrossfade="2825" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-accent-C6-V127-V7M4.aif" name="96(C6)-127" rootNote="96" loNote="96" hiNote="96" loVel="0" hiVel="127" start="56" end="519424" loopEnabled="1" loopStart="127840" loopEnd="380653" loopCrossfade="2662" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-accent-C#6-V127-4G33.aif" name="97(C#6)-127" rootNote="97" loNote="97" hiNote="97" loVel="0" hiVel="127" start="164" end="518659" loopEnabled="1" loopStart="241825" loopEnd="361383" loopCrossfade="1992" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-accent-D6-V127-VBSZ.aif" name="98(D6)-127" rootNote="98" loNote="98" hiNote="98" loVel="0" hiVel="127" start="133" end="518656" loopEnabled="1" loopStart="153680" loopEnd="380019" loopCrossfade="3198" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-accent-D#6-V127-FBLQ.aif" name="99(D#6)-127" rootNote="99" loNote="99" hiNote="99" loVel="0" hiVel="127" start="113" end="518531" loopEnabled="1" loopStart="180519" loopEnd="287210" loopCrossfade="1778" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-accent-E6-V127-TWKB.aif" name="100(E6)-127" rootNote="100" loNote="100" hiNote="100" loVel="0" hiVel="127" start="161" end="519424" loopEnabled="1" loopStart="104347" loopEnd="406178" loopCrossfade="2170" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-accent-F6-V127-RTPW.aif" name="101(F6)-127" rootNote="101" loNote="101" hiNote="101" loVel="0" hiVel="127" start="90" end="519680" loopEnabled="1" loopStart="98907" loopEnd="361136" loopCrossfade="2058" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-accent-F#6-V127-S9WK.aif" name="102(F#6)-127" rootNote="102" loNote="102" hiNote="102" loVel="0" hiVel="127" start="91" end="518272" loopEnabled="1" loopStart="94108" loopEnd="184022" loopCrossfade="1498" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-accent-G6-V127-FV27.aif" name="103(G6)-127" rootNote="103" loNote="103" hiNote="103" loVel="0" hiVel="127" start="103" end="520320" loopEnabled="1" loopStart="107620" loopEnd="361651" loopCrossfade="2239" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-accent-G#6-V127-6ZFP.aif" name="104(G#6)-127" rootNote="104" loNote="104" hiNote="104" loVel="0" hiVel="127" start="116" end="519296" loopEnabled="1" loopStart="297797" loopEnd="377820" loopCrossfade="1333" loopCrossfadeMode="equal_power"/>
+      <sample path="samples/1st-violin-sus-accent-A6-V127-X13Q.aif" name="105(A6)-127" rootNote="105" loNote="105" hiNote="105" loVel="0" hiVel="127" start="148" end="519040" loopEnabled="1" loopStart="272563" loopEnd="348189" loopCrossfade="1260" loopCrossfadeMode="equal_power"/>
+      <effects/>
+    </group>
+  </groups>
+  <effects>
+    <effect type="lowpass" frequency="21989.00916994164"/>
+    <effect type="chorus" mix="0.0" modDepth="0.2" modRate="0.2"/>
+    <effect type="convolution" mix="0.0" irFile="IR/Studio.wav"/>
+  </effects>
+  <midi>
+    <cc number="1">
+      <binding level="ui" type="control" parameter="VALUE" position="3" translation="linear" translationOutputMin="0" translationOutputMax="1"/>
+    </cc>
+  </midi>
+  <modulators/>
+  <tags/>
+</DecentSampler>
